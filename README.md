@@ -12,20 +12,26 @@ Este é um kit gratuito para quem vende para empresas e quer prospectar sem disp
 
 Guia completo (landing + passo a passo): **https://inematds.github.io/prospeccao-por-sinais/guia/**
 
+## Antes de começar
+
+- **Claude Code** ≥ 2.1.91 (precisa de assinatura paga do Claude): `curl -fsSL https://claude.ai/install.sh | bash` (Mac/Linux), `irm https://claude.ai/install.ps1 | iex` (Windows) ou `npm install -g @anthropic-ai/claude-code` — docs: https://docs.claude.com/en/docs/claude-code/overview
+- **Conta no Clay** (grátis ou teste de 14 dias).
+- **git** (ou baixe o [.zip](https://github.com/inematds/prospeccao-por-sinais/archive/refs/heads/main.zip)) e, só para a skill opcional de sinais, **Node.js** (`npx`).
+
 ## O processo, do início ao fim
 
 Quem faz: 🧠 você no Claude Code · ⚙️ Clay/script · 🤖 agente (Claude Code trabalhando sozinho)
 
 | # | Passo | Comando | Quem |
 |---|-------|---------|------|
-| 1 | Baixar o kit e abrir o Claude Code na pasta | `git clone https://github.com/inematds/prospeccao-por-sinais.git` · `cp -r prospeccao-por-sinais/kit ~/minha-prospeccao` · `cd ~/minha-prospeccao && claude` | 🧠 |
+| 1 | Baixar o kit e abrir o Claude Code na pasta | `git clone https://github.com/inematds/prospeccao-por-sinais.git` · `cp -r prospeccao-por-sinais/kit ~/minha-prospeccao` · `cd ~/minha-prospeccao` · `claude` | 🧠 |
 | 2 | Instalar o plugin do Clay (Claude Code ≥ 2.1.91) | `/plugin marketplace add clay-run/agent-plugins` · `/plugin install clay@clay-plugins` · "Rode a skill clay:setup" | 🧠 |
 | 3 | Preencher o contexto do negócio | editar `contexto/*.md` (modelo em `contexto/exemplo/`) | 🧠 |
 | 4 | Definir os sinais | editar `sinais.yaml` · opcional: `npx skills add clay-run/clay-skill-creator --skill customer-signal-generator` | 🧠 + 🤖 |
 | 5 | ICP: lista de empresas (10 linhas primeiro) | Passo 1 de `prompts/passo-a-passo.md` | 🤖 + ⚙️ |
 | 6 | Sinal de contratação monitorado | Passo 2 | 🤖 + ⚙️ |
 | 7 | Agente de pesquisa (lançamento de produto) | Passo 3 | 🤖 + ⚙️ |
-| 8 | Decisor só onde há sinal (condição de execução) | Passo 4 | 🤖 + ⚙️ |
+| 8 | Decisor só onde há sinal (condição de execução: soma dos pesos dos sinais ativos ≥ 30) | Passo 4 | 🤖 + ⚙️ |
 | 9 | E-mail em cascata + verificação | Passo 5 | ⚙️ |
 | 10 | Mensagem com contexto (assunto + corpo citando o sinal) | Passo 6 — ou tudo de uma vez com `/goal` (`prompts/goal-prospeccao.md`) | 🤖 |
 | 11 | CSV final para revisão | `saida/leads-AAAA-MM-DD.csv` (colunas em `colunas-csv.md`) | 🤖 |

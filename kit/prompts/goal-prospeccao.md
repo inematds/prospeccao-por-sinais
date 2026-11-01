@@ -14,7 +14,8 @@ conectado (`clay:setup`). Troque o que está entre `< >`.
 
 ICP: empresas de <software (SaaS B2B)> no <Brasil>, com <200 a 1.000> funcionários.
 Decisores: <diretor(a) de operações, diretor(a) de suporte/CS ou CTO>.
-Sinais aceitos: os de sinais.yaml com peso >= <20>, dentro da janela de validade.
+Sinais aceitos: os de sinais.yaml, dentro da janela de validade. "Empresa com sinal" = soma dos
+pesos dos sinais ativos >= 30 (regra de sinais.yaml).
 
 Como trabalhar:
 - Leia CLAUDE.md, contexto/, sinais.yaml, colunas-csv.md e checklist-lgpd.md antes de começar.
@@ -22,7 +23,7 @@ Como trabalhar:
 - Antes de cada passo que gasta crédito, me diga o passo, o número de linhas e o gasto esperado,
   e espere eu responder "pode".
 - Rode cada passo novo em 10 linhas primeiro e me mostre o resultado.
-- Só busque decisor e e-mail em empresa com sinal presente.
+- Só busque decisor e e-mail em "empresa com sinal" (soma dos pesos >= 30).
 - E-mail em cascata, parando no primeiro válido. Sem telefone, a menos que eu peça.
 - Ignore quem estiver em supressao.csv.
 

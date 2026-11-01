@@ -12,20 +12,26 @@ This is a free kit for people who sell to businesses and want to prospect withou
 
 Full guide (landing page + step-by-step instructions): **https://inematds.github.io/prospeccao-por-sinais/guia/en/**
 
+## Before you start
+
+- **Claude Code** ≥ 2.1.91 (requires a paid Claude subscription): `curl -fsSL https://claude.ai/install.sh | bash` (Mac/Linux), `irm https://claude.ai/install.ps1 | iex` (Windows) or `npm install -g @anthropic-ai/claude-code` — docs: https://docs.claude.com/en/docs/claude-code/overview
+- **A Clay account** (free plan or 14-day trial).
+- **git** (or download the [.zip](https://github.com/inematds/prospeccao-por-sinais/archive/refs/heads/main.zip)) and, only for the optional signals skill, **Node.js** (`npx`).
+
 ## The process, from start to finish
 
 Who does what: 🧠 you in Claude Code · ⚙️ Clay/script · 🤖 agent (Claude Code working on its own)
 
 | # | Step | Command | Who |
 |---|-------|---------|------|
-| 1 | Download the kit and open Claude Code in the folder | `git clone https://github.com/inematds/prospeccao-por-sinais.git` · `cp -r prospeccao-por-sinais/kit ~/minha-prospeccao` · `cd ~/minha-prospeccao && claude` | 🧠 |
+| 1 | Download the kit and open Claude Code in the folder | `git clone https://github.com/inematds/prospeccao-por-sinais.git` · `cp -r prospeccao-por-sinais/kit ~/minha-prospeccao` · `cd ~/minha-prospeccao` · `claude` | 🧠 |
 | 2 | Install the Clay plugin (Claude Code ≥ 2.1.91) | `/plugin marketplace add clay-run/agent-plugins` · `/plugin install clay@clay-plugins` · "Run the clay:setup skill" | 🧠 |
 | 3 | Fill in your business context | Edit `contexto/*.md` (template in `contexto/exemplo/`) | 🧠 |
 | 4 | Define the signals | Edit `sinais.yaml` · optional: `npx skills add clay-run/clay-skill-creator --skill customer-signal-generator` | 🧠 + 🤖 |
 | 5 | ICP: company list (start with 10 rows) | Step 1 of `prompts/passo-a-passo.md` | 🤖 + ⚙️ |
 | 6 | Monitor hiring signals | Step 2 | 🤖 + ⚙️ |
 | 7 | Research agent (product launch) | Step 3 | 🤖 + ⚙️ |
-| 8 | Find decision-makers only when there is a signal (run condition) | Step 4 | 🤖 + ⚙️ |
+| 8 | Find decision-makers only when there is a signal (run condition: active signal weights add up to 30 or more) | Step 4 | 🤖 + ⚙️ |
 | 9 | Email waterfall + verification | Step 5 | ⚙️ |
 | 10 | Contextual message (subject + body mentioning the signal) | Step 6 — or do it all at once with `/goal` (`prompts/goal-prospeccao.md`) | 🤖 |
 | 11 | Final CSV for review | `saida/leads-AAAA-MM-DD.csv` (columns in `colunas-csv.md`) | 🤖 |

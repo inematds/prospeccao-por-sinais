@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Signal-Based Prospecting — B2B prospecting with Claude Code and Clay</title>
-<meta name="description" content="A kit and guide to finding companies based on the right signals: Claude Code orchestrates, Clay provides the data, and you review it. Includes context templates, prompts, sinais.yaml, and a Brazilian LGPD checklist.">
+<meta name="description" content="A kit and guide to finding companies based on the right signal: Claude Code orchestrates, Clay provides the data, and you review it. Includes context templates, prompts, sinais.yaml, and an LGPD checklist.">
 <meta property="og:title" content="Signal-Based Prospecting — INEMA.CLUB">
-<meta property="og:description" content="Reach out only to companies ready to buy: signal-based B2B prospecting with Claude Code and Clay.">
+<meta property="og:description" content="Reach out only when a company is ready to buy: signal-based B2B prospecting with Claude Code and Clay.">
 <meta property="og:image" content="https://inematds.github.io/prospeccao-por-sinais/capa/capa.png">
 <link rel="alter&#110;ate" hreflang="pt-BR" href="https://inematds.github.io/prospeccao-por-sinais/guia/">
 <link rel="alter&#110;ate" hreflang="en" href="https://inematds.github.io/prospeccao-por-sinais/guia/en/">
@@ -88,7 +88,7 @@
   .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
   .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
   .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
-  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0;white-space:pre}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0;white-space:pre-wrap;overflow-wrap:anywhere}
   pre .c{color:#8a8a98} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
   .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
   .step>div,.card{min-width:0}
@@ -139,39 +139,39 @@
   <div class="glow"></div>
   <div class="wrap">
     <div>
-      <span class="chip">Kit + guide · AI for B2B sales</span>
-      <h1>Reach out only to those <span class="amb">ready</span> to buy</h1>
-      <p class="lead">B2B prospecting starts with a real reason: Claude Code orchestrates, Clay provides the data, and you review everything before sending.</p>
+      <span class="chip">Kit + guide · AI-powered B2B sales</span>
+      <h1>Reach out only when a company is <span class="amb">ready</span> to buy</h1>
+      <p class="lead">B2B prospecting that starts with a real reason: Claude Code orchestrates, Clay provides the data, and you review it before anything is sent.</p>
       <div class="cta">
         <a class="btn" href="#guia">Start the guide</a>
         <a class="btn ghost" href="#kit">Download the kit</a>
       </div>
     </div>
-    <figure><img src="../assets/banner-en.jpg" alt="Banner: Signal-Based Prospecting — reach out only to those ready to buy"></figure>
+    <figure><img src="../assets/banner-en.jpg" alt="Banner: Signal-Based Prospecting — reach out only when a company is ready to buy"></figure>
   </div>
 </header>
 
 <section id="resumo" class="resumo"><div class="wrap">
   <span class="chip">In brief</span>
-  <p>This is a free kit for people who sell to businesses and want to prospect without blasting cold email lists. The idea is to look for <strong>signals</strong>—public events that suggest a company may need your help now, such as a job opening, a new product launch, or a new executive—and only then find the decision-maker and write a message that mentions that signal. Claude Code handles the heavy lifting with Clay (a platform for company and contact data) and delivers a spreadsheet for you to review. You need Claude Code, a Clay account (with a free plan and trial), and an afternoon to fill in your business context.</p>
+  <p>This free kit is for people who sell to businesses and want to prospect without blasting cold email lists. The idea is to look for <strong>signals</strong>—public events that suggest a company may need your help now, such as an open role, a product launch, or a new executive—and then find the decision-maker and write a message that mentions that signal. Claude Code does the heavy lifting with Clay (a company and contact data platform) and gives you a spreadsheet to review. You need Claude Code, a Clay account (there’s a free plan and a trial), and an afternoon to fill in your business context.</p>
 </div></section>
 
 <section id="oque"><div class="wrap">
   <span class="chip">The problem and the idea</span>
-  <h2>Cold lists wear everyone out. Signals start conversations.</h2>
-  <p class="sub">Traditional prospecting buys a list, sends everyone the same message, and hopes for the best. Almost nobody replies, your domain lands in spam, and your brand gets a reputation for being annoying.</p>
-  <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="../assets/banner-grade-en.jpg" alt="The six stages: ICP, signal, decision-maker, cascade, message, and review" loading="lazy" style="width:100%;display:block"></figure>
+  <h2>Cold lists wear everyone out. A signal opens a conversation.</h2>
+  <p class="sub">Traditional prospecting buys a list, sends the same message to everyone, and hopes for the best. Almost no one replies, the domain lands in spam, and the brand gets a reputation for being annoying.</p>
+  <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="../assets/banner-grade-en.jpg" alt="Banner showing the flow labels: ICP, signal, decision-maker, cascade, message, and review" loading="lazy" style="width:100%;display:block"></figure>
   <div class="grid g3">
-    <div class="card"><h3>🧊 The problem</h3><p>Cold lists with no context, generic AI-written messages, dozens of tabs and tools, and emails that go straight to spam.</p></div>
-    <div class="card"><h3>📡 The idea</h3><p>Prospect based on signals: first find out <em>who has a reason to talk now</em>, then find the right person and bring up that reason.</p></div>
-    <div class="card"><h3>🧠 How the work is split</h3><p>Clay handles the data (companies, job openings, emails). Claude Code handles the tools: you ask in plain language, and it does the work. You review and decide.</p></div>
+    <div class="card"><h3>🧊 The problem</h3><p>Cold lists without context, generic AI-written messages, dozens of tabs and tools, and emails that go straight to spam.</p></div>
+    <div class="card"><h3>📡 The idea</h3><p>Prospect based on a signal: first find <em>who has a reason to talk now</em>, then find the right person and talk about that reason.</p></div>
+    <div class="card"><h3>🧠 How the work is split</h3><p>Clay handles the data problem (companies, jobs, emails). Claude Code handles the tools: you ask in plain language, and it does the work. You review and decide.</p></div>
   </div>
 </div></section>
 
 <section id="fluxo"><div class="wrap">
   <span class="chip">How it works</span>
   <h2>The 7 steps</h2>
-  <p class="sub">Each step filters the previous one. Costly lookups (people, emails) are only run for companies that pass the signal check.</p>
+  <p class="sub">Each step filters the one before it. The costly credits (for people and emails) are spent only on companies that passed the signal check.</p>
   <div class="flow">
     <span>1 · ICP</span><span class="arr">→</span>
     <span>2 · Hiring signal</span><span class="arr">→</span>
@@ -182,128 +182,153 @@
     <span>7 · Review + send</span>
   </div>
   <div class="grid g3" style="margin-top:26px">
-    <div class="card"><div class="num">1</div><h3>ICP: the company list</h3><p>ICP means ideal customer profile. You set the industry, company size, and country; Clay returns matching companies.</p></div>
-    <div class="card"><div class="num">2</div><h3>Hiring signal</h3><p>Clay tracks open roles that matter to you. An AI job opening, for example, may point to a new AI project.</p></div>
-    <div class="card"><div class="num">3</div><h3>Research agent</h3><p>An AI agent column reads websites, blogs, and news, then answers with a link: has the company launched a new product in recent months?</p></div>
-    <div class="card"><div class="num">4</div><h3>Find decision-makers only where there is a signal</h3><p>The people search has an <strong>execution condition</strong>: it only runs for companies with a signal. This is where you save credits.</p></div>
-    <div class="card"><div class="num">5</div><h3>Waterfall enrichment</h3><p>Multiple email providers run in sequence; the waterfall stops at the first valid result. Then the email is verified.</p></div>
-    <div class="card"><div class="num">6</div><h3>Contextual message</h3><p>Claude Code reads your business files and writes a subject line and body that mention the company’s signal, with a simple question and an easy way to opt out.</p></div>
-    <div class="card"><div class="num">7</div><h3>Human review + sequencer</h3><p>You review the spreadsheet, then import it into your sequencer and send from a warmed-up domain with a low daily send volume.</p></div>
+    <div class="card"><div class="num">1</div><h3>ICP: the company list</h3><p>ICP means ideal customer profile. You define the industry, size, and country; Clay returns companies that fit.</p></div>
+    <div class="card"><div class="num">2</div><h3>Hiring signal</h3><p>Clay monitors open roles with titles that matter to you. An AI role, for example, can point to an AI project getting started.</p></div>
+    <div class="card"><div class="num">3</div><h3>Research agent</h3><p>An AI agent column reads the company site, blog, and news and answers with a link: has the company launched a new product in recent months?</p></div>
+    <div class="card"><div class="num">4</div><h3>Find decision-makers only when there’s a signal</h3><p>The people search has a <strong>run condition</strong>: it runs only for companies with a signal. This is where you save credits.</p></div>
+    <div class="card"><div class="num">5</div><h3>Email enrichment waterfall</h3><p>Several email providers run in sequence; the waterfall stops at the first valid result. Then the email is verified.</p></div>
+    <div class="card"><div class="num">6</div><h3>Message with context</h3><p>Claude Code reads your business files and writes a subject and body that mention the company’s signal, with a simple question and an opt-out.</p></div>
+    <div class="card"><div class="num">7</div><h3>Human review + sequencer</h3><p>You review the spreadsheet and only then import it into a sequencer, sending from a warmed-up domain with a low daily volume.</p></div>
   </div>
+  <h3 style="margin:34px 0 12px;font-size:1.15rem">Terms used in this guide</h3>
+  <div class="tblwrap"><table class="tbl">
+    <tr><th>Term</th><th>Meaning</th></tr>
+    <tr><td>Terminal</td><td>Your computer’s command window (Terminal on Mac and Linux; PowerShell on Windows). Claude Code runs there.</td></tr>
+    <tr><td>Plugin, marketplace, skill</td><td>A plugin teaches Claude Code to use a tool; a marketplace is the catalog it comes from; a skill is a ready-made set of steps inside it (e.g., <code>clay:setup</code>).</td></tr>
+    <tr><td>Credit and action</td><td>Clay’s units: credits pay for provider data (email, company, person); actions pay for running steps.</td></tr>
+    <tr><td>Signal</td><td>A public event that gives you a reason to talk now (an open role, launch, new executive, investment).</td></tr>
+    <tr><td>Waterfall</td><td>Several data providers queried in sequence until one finds the data.</td></tr>
+    <tr><td>CTA</td><td>The call to action at the end of the message. Here, always low-key: a simple question.</td></tr>
+    <tr><td>Opt-out</td><td>The option to stop: a line explaining how to stop receiving messages.</td></tr>
+    <tr><td>Sequencer</td><td>A tool that sends campaign emails gradually and sends reminders (follow-ups). Clay has one; separate tools are also available.</td></tr>
+    <tr><td>Warmed-up secondary domain</td><td>An address similar to your company’s (e.g., <code>contact-yourcompany.com</code>) used only for prospecting. It starts by sending a small number of emails and gradually increases, helping email providers trust it. If something goes wrong, your main domain stays protected.</td></tr>
+  </table></div>
 </div></section>
 
 <section id="pre"><div class="wrap">
   <span class="chip">Requirements</span>
   <h2>What you need first</h2>
-  <p class="sub">Three things. No coding required.</p>
-  <div class="grid g3">
-    <div class="card"><h3>Claude Code</h3><p>Version 2.1.91 or later, as required by the Clay plugin. Check in the terminal:</p><pre><span class="k">claude</span> --version</pre></div>
-    <div class="card"><h3>A Clay account</h3><p>Free plan (100 credits/month) or a 14-day trial (1,000 credits). You can run the full workflow on a small scale.</p><pre><span class="c"># create an account at</span>
+  <p class="sub">No programming is required. You’ll type a few commands in the terminal (your computer’s command window).</p>
+  <div class="grid g2">
+    <div class="card"><h3>Claude Code</h3><p>Anthropic’s assistant that runs in the terminal. You need a paid Claude subscription (see the <a href="https://claude.com/pricing" target="_blank" rel="noopener">plans at claude.com/pricing</a>). The Clay plugin requires version 2.1.91 or later. Install it and check:</p><pre><span class="c"># install (Mac/Linux)</span>
+<span class="k">curl -fsSL</span> <span class="s">https://claude.ai/install.sh</span> | bash
+<span class="c"># Windows (PowerShell)</span>
+<span class="k">irm</span> <span class="s">https://claude.ai/install.ps1</span> | iex
+<span class="c"># or, if you already have Node.js</span>
+<span class="k">npm install -g</span> @anthropic-ai/claude-code
+<span class="c"># check the version</span>
+<span class="k">claude</span> --version</pre><p class="src">Official documentation: <a href="https://docs.claude.com/en/docs/claude-code/overview" target="_blank" rel="noopener">Claude Code</a>.</p></div>
+    <div class="card"><h3>Git and Node.js (optional)</h3><p><strong>git</strong> downloads the kit with <code>git clone</code>; without it, download the .zip. <strong>Node.js</strong> (which includes <code>npx</code>) is only used in the optional signals skill step.</p><pre><span class="c"># check whether they’re already installed</span>
+<span class="k">git</span> --version
+<span class="k">node</span> --version</pre><p class="src">Downloads: <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a> · <a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a>.</p></div>
+    <div class="card"><h3>Clay account</h3><p>Free plan (100 credits/month) or a 14-day trial (1,000 credits). You can run the entire workflow at a small scale.</p><pre><span class="c"># create your account at</span>
 <span class="s">https://www.clay.com</span></pre></div>
-    <div class="card"><h3>Your business context</h3><p>An afternoon to fill in the 6 files in <code>kit/contexto/</code> (in Portuguese). Without them, your message will sound generic.</p><pre><span class="c"># templates + fictional example</span>
+    <div class="card"><h3>Your business context</h3><p>Set aside an afternoon to fill in the 6 files in <code>kit/contexto/</code> (in Portuguese). Without them, the message will be generic.</p><pre><span class="c"># templates + fictional example</span>
 kit/contexto/</pre></div>
   </div>
 </div></section>
 
 <section id="guia"><div class="wrap">
-  <span class="chip">Step-by-step user guide</span>
+  <span class="chip">Step-by-step guide</span>
   <h2>From zero to a reviewed spreadsheet</h2>
-  <p class="sub">Commands starting with <code>/</code> are typed inside Claude Code. Enter the others in the terminal.</p>
+  <p class="sub">Commands starting with <code>/</code> are entered inside Claude Code. Enter the others in the terminal.</p>
 
   <div class="step"><div class="b">1</div><div>
     <h3>Download the kit and open Claude Code in the folder <span class="who">🧠 you</span></h3>
-    <p>The kit becomes your prospecting project folder. Its <code>CLAUDE.md</code> tells Claude Code how to behave (ask before spending credits, run 10 rows first, never send anything).</p>
+    <p>The kit becomes your prospecting project folder. Its <code>CLAUDE.md</code> file tells Claude Code how to behave (don’t spend credits without asking, run 10 rows first, never send anything).</p>
 <pre><span class="k">git clone</span> <span class="s">https://github.com/inematds/prospeccao-por-sinais.git</span>
 <span class="k">cp -r</span> prospeccao-por-sinais/kit ~/minha-prospeccao
-<span class="k">cd</span> ~/minha-prospeccao <span class="k">&amp;&amp; claude</span></pre>
+<span class="k">cd</span> ~/minha-prospeccao
+<span class="k">claude</span></pre>
+    <p>No git? <a href="https://github.com/inematds/prospeccao-por-sinais/archive/refs/heads/main.zip">Download the .zip</a>, unzip it, copy the <code>kit</code> folder wherever you like, open a terminal in that folder, and type <code>claude</code>.</p>
   </div></div>
 
   <div class="step"><div class="b">2</div><div>
     <h3>Install the official Clay plugin <span class="who">🧠 you</span></h3>
-    <p>In Claude Code, add the marketplace and install the plugin. Then ask it to run the setup skill, which installs the <code>clay</code> command-line tool and signs you in.</p>
+    <p>Inside Claude Code, add the marketplace and install the plugin. Then ask it to run the setup skill, which installs the <code>clay</code> command line and signs you in.</p>
 <pre><span class="k">/plugin marketplace add</span> clay-run/agent-plugins
 <span class="k">/plugin install</span> clay@clay-plugins
 <span class="c"># then, in English:</span>
 Run the clay:setup skill and sign me in to Clay.</pre>
-    <p>Using Codex? The equivalent commands are <code>codex plugin marketplace add clay-run/agent-plugins</code> and installing <em>clay</em> under Plugins.</p>
+    <p>Using Codex? The equivalent is <code>codex plugin marketplace add clay-run/agent-plugins</code>, then install <em>clay</em> in Plugins.</p>
   </div></div>
 
   <div class="step"><div class="b">3</div><div>
     <h3>Fill in your business context <span class="who">🧠 you</span></h3>
-    <p>Open the 6 templates in <code>contexto/</code> (profile, offer, cases, proof, FAQ, and voice). Use <code>contexto/exemplo/</code> (a fictional company) as a reference. The agent must not make claims that are not in <code>provas.md</code>.</p>
+    <p>Open the 6 templates in <code>contexto/</code> (profile, offer, cases, proof, FAQ, voice). Use <code>contexto/exemplo/</code> (a fictional company) as a reference. The agent must not claim anything that isn’t in <code>provas.md</code>. The example is for a software company; replace the ICP, roles, and signals with ones from your market (for a local business, see the <a href="#brasil">Brazil</a> section).</p>
 <pre><span class="c"># ask Claude Code for help</span>
 Read contexto/exemplo/ and interview me to fill in contexto/ with my company’s information.</pre>
   </div></div>
 
   <div class="step"><div class="b">4</div><div>
     <h3>Define your signals <span class="who">🧠 you + 🤖 agent</span></h3>
-    <p>Edit <code>sinais.yaml</code>: each signal has a validity window in days and a weight. To get help finding the signals that matter in your market, try this public signal-generation skill:</p>
+    <p>Edit <code>sinais.yaml</code>: each signal has a validity window in days and a weight. To get help figuring out which signals matter in your market, you can use a public skill that generates signals:</p>
 <pre><span class="c"># optional, in the terminal</span>
 <span class="k">npx skills add</span> clay-run/clay-skill-creator --skill customer-signal-generator</pre>
   </div></div>
 
   <div class="step"><div class="b">5</div><div>
     <h3>Test with 10 rows <span class="who">🤖 agent · ⚙️ Clay</span></h3>
-    <p>Before any larger batch, run steps 1 and 2 of the workflow on 10 companies. Check how many have a signal and how many have people with verified emails. Prompts for each step are in <code>prompts/passo-a-passo.md</code> (in Portuguese).</p>
-<pre>Follow Step 1 and Step 2 in prompts/passo-a-passo.md for 10 companies.
+    <p>Before running any batch, run workflow steps 1 and 2 on 10 companies. Check how many have a signal and how many people have a verified email. Prompts for each step are in <code>prompts/passo-a-passo.md</code> (in Portuguese).</p>
+<pre>Follow Step 1 and Step 2 of prompts/passo-a-passo.md on 10 companies.
 Show me the results and estimated cost before running more.</pre>
   </div></div>
 
   <div class="step"><div class="b">6</div><div>
     <h3>Run /goal with a clear finish line <span class="who">🤖 agent · ⚙️ Clay</span></h3>
-    <p><code>/goal</code> tells Claude Code to keep going until a verifiable condition is met: N leads, no blank columns, a verified email, a subject and body that mention the signal, a low-pressure call to action, and a final CSV. The full prompt is in <code>prompts/goal-prospeccao.md</code> (in Portuguese).</p>
+    <p><code>/goal</code> tells Claude Code to keep going until a verifiable condition is met: N leads, no blank columns, verified email, subject and body mentioning the signal, a low-key CTA, and a final CSV. The full prompt is in <code>prompts/goal-prospeccao.md</code> (in Portuguese).</p>
 <pre><span class="k">/goal</span> I want 25 new signal-based prospecting leads, ready for human review.
 ... (copy the rest of prompts/goal-prospeccao.md)</pre>
-    <p>Even within <code>/goal</code>, <code>CLAUDE.md</code> tells the agent to stop and ask for your approval before each step that spends credits.</p>
+    <p>Even inside <code>/goal</code>, <code>CLAUDE.md</code> tells the agent to stop and ask you for a “go-ahead” before each step that spends credits. If your version of Claude Code doesn’t have <code>/goal</code>, run the prompts in <code>prompts/passo-a-passo.md</code> (in Portuguese) one at a time; the result is the same.</p>
   </div></div>
 
   <div class="step"><div class="b">7</div><div>
     <h3>Review the spreadsheet <span class="who">🧠 you</span></h3>
-    <p>Open <code>saida/leads-AAAA-MM-DD.csv</code>. The columns are listed in <code>colunas-csv.md</code> (in Portuguese). Start with rows marked <code>revisar = sim</code>, read each message, and check the signal link.</p>
+    <p>Open <code>saida/leads-AAAA-MM-DD.csv</code>. The columns are listed in <code>colunas-csv.md</code> (in Portuguese). Start with rows where <code>revisar = sim</code>, read each message, and check the signal link.</p>
 <pre><span class="c"># main columns</span>
 empresa, decisor, cargo, email, email_status, sinal, resumo_sinal,
 link_fonte_sinal, gancho, assunto, corpo, revisar</pre>
   </div></div>
 
   <div class="step"><div class="b">8</div><div>
-    <h3>Import into your sequencer and send slowly <span class="who">🧠 you · ⚙️ sequencer</span></h3>
-    <p>In Clay: import data, CSV, new table, then create a campaign using that table as the list. Send from a warmed-up secondary domain, with a low daily send volume, and increase it gradually. Anyone who asks to opt out goes into <code>supressao.csv</code> (in Portuguese).</p>
-<pre><span class="c"># rule of thumb</span>
-warmed-up secondary domain → low daily send volume → increase gradually
+    <h3>Import into a sequencer and send gradually <span class="who">🧠 you · ⚙️ sequencer</span></h3>
+    <p>A sequencer gradually sends the campaign and its reminders (see <a href="#fluxo">Terms used in this guide</a>). In Clay: import data, CSV, new table, then create a campaign using that table as the list; you can also buy sending accounts there. Send from a warmed-up secondary domain, with a low daily volume, and increase it gradually. Anyone who asks to opt out goes into <code>supressao.csv</code> (in Portuguese).</p>
+<pre><span class="c"># practical rule</span>
+warmed-up secondary domain → low daily volume → increase gradually
 spam rate below 0.3% (Gmail sender requirement)</pre>
-    <p class="src">Gmail: <a href="https://support.google.com/a/answer/81126?hl=en" target="_blank" rel="noopener">Email sender guidelines</a> (spam rate below 0.3% and gradual volume increases).</p>
+    <p class="src">Gmail: <a href="https://support.google.com/a/answer/81126?hl=en" target="_blank" rel="noopener">email sender guidelines</a> (spam rate below 0.3% and gradual volume increases).</p>
   </div></div>
 </div></section>
 
 <section id="custos"><div class="wrap">
   <span class="chip">Costs</span>
   <h2>How much it costs to get started</h2>
-  <p class="sub">You can learn the whole workflow for free. The figures below are from Clay’s public documentation, checked on Nov 1, 2026. Prices change, so check before subscribing.</p>
+  <p class="sub">You can learn the full workflow in Clay without paying. Claude Code, the orchestrator, requires a paid Claude subscription (<a href="https://claude.com/pricing" target="_blank" rel="noopener">plans</a>). The figures below come from Clay’s public documentation, checked on Nov 1, 2026. Prices change, so check before subscribing.</p>
   <div class="grid g3">
-    <div class="card"><h3>Free</h3><p><strong>100 credits per month.</strong> Enough to test 10 rows at each step and understand the cost.</p></div>
+    <div class="card"><h3>Free</h3><p><strong>100 credits per month.</strong> Test a few rows at each step and check in Clay how much each step costs before scaling up.</p></div>
     <div class="card"><h3>14-day trial</h3><p><strong>1,000 credits.</strong> Good for running your first real small batch.</p></div>
-    <div class="card"><h3>Launch plan</h3><p><strong>Starting at US$ 185/month</strong>, with 2,500 credits and 15,000 actions. It only makes sense once the workflow has shown it can start conversations.</p></div>
+    <div class="card"><h3>Launch plan</h3><p><strong>Starting at US$ 185/month</strong>, with 2,500 credits and 15,000 actions. It makes sense once the workflow has proven it can start conversations.</p></div>
   </div>
   <div class="grid g2" style="margin-top:16px">
-    <div class="card"><h3>💡 Credits returned</h3><p>In a waterfall, default email and phone providers <strong>return the credit if they don’t find</strong> the data. The waterfall also stops at the first valid result.</p></div>
-    <div class="card"><h3>📵 Skip mobile numbers at first</h3><p><strong>Mobile number lookups aren’t available on the free plan or trial.</strong> Start with email only.</p></div>
+    <div class="card"><h3>💡 Credits refunded</h3><p>In a waterfall, the standard email and mobile phone providers <strong>refund the credit when they can’t find</strong> the data. The waterfall also stops at the first valid result.</p></div>
+    <div class="card"><h3>📵 Skip mobile phones at first</h3><p>Mobile phone search <strong>isn’t available on the free plan or trial</strong>. Start with email only.</p></div>
   </div>
   <p class="src">Sources: <a href="https://github.com/clay-run/public-docs" target="_blank" rel="noopener">Clay public documentation</a> (plans and billing; how to build a data waterfall).</p>
 </div></section>
 
 <section id="economia"><div class="wrap">
-  <span class="chip">Save credits</span>
-  <h2>The biggest credit saver: an execution condition</h2>
-  <p class="sub">Finding people and emails costs the most. Run those searches only when it makes sense.</p>
+  <span class="chip">Saving credits</span>
+  <h2>The biggest money saver: a run condition</h2>
+  <p class="sub">Finding people and emails costs the most. So that search runs only where it makes sense.</p>
   <div class="tblwrap"><table class="tbl">
     <tr><th>Step</th><th>Runs on</th><th>Why</th></tr>
-    <tr><td>Company list (ICP)</td><td>all companies matching the filter</td><td>it’s the base list; test with 10 first</td></tr>
-    <tr><td>Hiring signal and research agent</td><td>all companies on the list</td><td>finds those with a reason to talk now</td></tr>
-    <tr><td>Decision-maker search</td><td><strong>companies with a signal only</strong></td><td>companies without a signal don’t spend credits on people</td></tr>
+    <tr><td>Company list (ICP)</td><td>all companies that match the filter</td><td>it’s the starting point; test with 10 first</td></tr>
+    <tr><td>Hiring signal and research agent</td><td>all companies on the list</td><td>finds who has a reason to talk now</td></tr>
+    <tr><td>Decision-maker search</td><td><strong>only companies with a signal</strong></td><td>companies without a signal don’t spend credits on people</td></tr>
     <tr><td>Email waterfall</td><td>only decision-makers found</td><td>stops at the first valid email</td></tr>
-    <tr><td>Mobile number</td><td>only if you ask</td><td>not available on the free plan or trial</td></tr>
+    <tr><td>Mobile phone</td><td>only if you ask</td><td>not available on free/trial</td></tr>
   </table></div>
-  <p class="note">In the kit’s <code>sinais.yaml</code> (in Portuguese), each signal has a weight. Suggested rule: search for a decision-maker only when the active signals for the company add up to 30 or more.</p>
+  <p class="note">“Company with a signal” has one definition, the same in <code>CLAUDE.md</code>, the prompts, and <code>sinais.yaml</code>: the sum of the weights of active signals (within their validity window) is 30 or more. Change that number in <code>sinais.yaml</code> if you want to be more or less strict.</p>
 </div></section>
 
 <section id="brasil"><div class="wrap">
@@ -311,21 +336,21 @@ spam rate below 0.3% (Gmail sender requirement)</pre>
   <h2>Using this in Brazil: LGPD and data coverage</h2>
   <p class="sub">The workflow works here, with two things to keep in mind.</p>
   <div class="grid g2">
-    <div class="card"><h3>⚖️ LGPD</h3><p>Brazil’s General Data Protection Law (LGPD) is often the legal basis for B2B prospecting when it involves legitimate interest. In practice:</p>
+    <div class="card"><h3>⚖️ LGPD</h3><p>B2B prospecting often relies on legitimate interest. In practice:</p>
       <ul>
-        <li>the contact is relevant to the person’s role;</li>
-        <li>clearly identify who is writing;</li>
-        <li>make it easy to opt out of every message;</li>
+        <li>contact relevant to the person’s role;</li>
+        <li>clear identification of who is writing;</li>
+        <li>an easy opt-out in every message;</li>
         <li>always respect the suppression list;</li>
-        <li>don’t use sensitive personal data;</li>
-        <li>keep the source of each data point.</li>
+        <li>no sensitive personal data;</li>
+        <li>keep the source of every data point.</li>
       </ul>
-      <p style="margin-top:.6em">The kit includes <code>checklist-lgpd.md</code> (in Portuguese). This isn’t legal advice; check with your legal team. References: <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener">Brazilian Law 13,709/2018</a> and the <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">ANPD</a> (Brazil’s National Data Protection Authority).</p></div>
-    <div class="card"><h3>🗺️ Data coverage varies by country</h3><p>Data providers vary in their coverage across countries and industries. So:</p>
+      <p style="margin-top:.6em">The kit includes <code>checklist-lgpd.md</code> (in Portuguese). This is not legal advice; check with your legal team. References: <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener">Law 13,709/2018</a> and <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">ANPD</a>, Brazil’s data protection authority.</p></div>
+    <div class="card"><h3>🗺️ Data coverage varies by country</h3><p>Data sources have different coverage in each country and industry. So:</p>
       <ul>
-        <li>always test 10 rows and see how many return with a verified email;</li>
-        <li>if coverage is weak, ask the agent to search the company website (contact page, team page);</li>
-        <li>for a small local business (clinic, shop, office), use Google Maps and the website to build your list.</li>
+        <li>always test 10 rows and see how many return a verified email;</li>
+        <li>if the data source is weak, ask the agent to look on the company’s website (contact or team page);</li>
+        <li>for a small local business (clinic, store, office), use Google Maps and the website as sources for your list.</li>
       </ul></div>
   </div>
 </div></section>
@@ -333,14 +358,14 @@ spam rate below 0.3% (Gmail sender requirement)</pre>
 <section id="erros"><div class="wrap">
   <span class="chip">Common mistakes</span>
   <h2>What goes wrong (and how to avoid it)</h2>
-  <p class="sub">Almost every problem comes from skipping one of the <code>CLAUDE.md</code> rules.</p>
+  <p class="sub">Almost all problems come from skipping one of the rules in <code>CLAUDE.md</code>.</p>
   <div class="grid g3">
-    <div class="card"><h3><span class="bad">✗</span> Run the whole table right away</h3><p>It can use up the month’s credits on a bad setup. Always start with 10 rows.</p></div>
-    <div class="card"><h3><span class="bad">✗</span> Search for decision-makers at every company</h3><p>This is the biggest waste. Use the execution condition: search only where there is a signal.</p></div>
+    <div class="card"><h3><span class="bad">✗</span> Run the whole table right away</h3><p>You can use up the month’s credits with one bad setup. Always start with 10 rows.</p></div>
+    <div class="card"><h3><span class="bad">✗</span> Find decision-makers at every company</h3><p>This is the biggest waste. Use the run condition: only for companies with a signal.</p></div>
     <div class="card"><h3><span class="bad">✗</span> Empty context</h3><p>Without a profile, cases, and proof, AI writes a generic message. Fill in <code>contexto/</code> first.</p></div>
-    <div class="card"><h3><span class="bad">✗</span> A signal with no source or past its date</h3><p>Mentioning a job opening that has closed sounds careless. Require a link and respect each signal’s time window.</p></div>
-    <div class="card"><h3><span class="bad">✗</span> Send from your main domain</h3><p>If it lands in spam, your company’s email reputation suffers too. Use a warmed-up secondary domain.</p></div>
-    <div class="card"><h3><span class="bad">✗</span> High volume on day one</h3><p>Send a few emails per day, increase gradually, and keep the spam rate below 0.3%.</p></div>
+    <div class="card"><h3><span class="bad">✗</span> Signal without a source or past its date</h3><p>Mentioning a job that has already closed sounds careless. Require a link and respect each signal’s validity window.</p></div>
+    <div class="card"><h3><span class="bad">✗</span> Send from your main domain</h3><p>If it lands in spam, your company’s email reputation takes the hit too. Use a warmed-up secondary domain.</p></div>
+    <div class="card"><h3><span class="bad">✗</span> High volume on day one</h3><p>Send a few emails a day, increase gradually, and keep the spam rate below 0.3%.</p></div>
   </div>
 </div></section>
 
@@ -350,31 +375,32 @@ spam rate below 0.3% (Gmail sender requirement)</pre>
   <p class="sub">Everything is plain text, ready to copy into your project folder and edit.</p>
   <div class="tblwrap"><table class="tbl">
     <tr><th>File</th><th>What it’s for</th></tr>
-    <tr><td><code>CLAUDE.md</code></td><td>Agent rules: ask before spending credits, start with 10 rows, use an execution condition, require human review, opt-out, and follow LGPD.</td></tr>
-    <tr><td><code>contexto/</code></td><td>6 templates (business profile, offer, cases, proof, FAQ, voice) + <code>exemplo/</code> with a fictional company (in Portuguese).</td></tr>
-    <tr><td><code>prompts/goal-prospeccao.md</code></td><td>A prompt for <code>/goal</code> with a verifiable finish line (in Portuguese).</td></tr>
-    <tr><td><code>prompts/passo-a-passo.md</code></td><td>One prompt for each of the 7 steps (in Portuguese).</td></tr>
-    <tr><td><code>sinais.yaml</code></td><td>Sample signals (hiring, launch, new executive, investment, price change, expansion), each with a time window and weight (in Portuguese).</td></tr>
-    <tr><td><code>colunas-csv.md</code></td><td>Output spreadsheet columns and review rules (in Portuguese).</td></tr>
-    <tr><td><code>checklist-lgpd.md</code></td><td>A practical LGPD checklist for B2B prospecting (in Portuguese).</td></tr>
-    <tr><td><code>supressao.csv</code></td><td>List of people who asked to opt out; starts empty.</td></tr>
+    <tr><td><code>CLAUDE.md</code></td><td>Agent rules: don’t spend credits without asking, run 10 rows first, use a run condition, require human review, handle opt-outs, follow LGPD.</td></tr>
+    <tr><td><code>contexto/</code></td><td>6 templates (business profile, offer, cases, proof, FAQ, voice) + <code>exemplo/</code> with a fictional company.</td></tr>
+    <tr><td><code>prompts/goal-prospeccao.md</code></td><td>Prompt for <code>/goal</code> with a verifiable finish line.</td></tr>
+    <tr><td><code>prompts/passo-a-passo.md</code></td><td>One prompt in Portuguese for each of the 7 steps.</td></tr>
+    <tr><td><code>sinais.yaml</code></td><td>Sample signals (hiring, launch, new executive, investment, price change, expansion) with a time window and weight.</td></tr>
+    <tr><td><code>colunas-csv.md</code></td><td>Output spreadsheet columns and review rules.</td></tr>
+    <tr><td><code>checklist-lgpd.md</code></td><td>Practical LGPD checklist for B2B prospecting.</td></tr>
+    <tr><td><code>supressao.csv</code></td><td>List of people who asked to opt out (starts empty).</td></tr>
   </table></div>
   <div class="cta" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
     <a class="btn" href="https://github.com/inematds/prospeccao-por-sinais/archive/refs/heads/main.zip">Download the kit (.zip)</a>
-    <a class="btn ghost" href="https://github.com/inematds/prospeccao-por-sinais/tree/main/kit" target="_blank" rel="noopener">View kit/ folder on GitHub</a>
+    <a class="btn ghost" href="https://github.com/inematds/prospeccao-por-sinais/tree/main/kit" target="_blank" rel="noopener">View the kit/ folder on GitHub</a>
   </div>
 </div></section>
 
-<section id="videos"><div class="wrap">
+<!-- Videos section: remains hidden until YouTube embeds are added. When you paste the embeds in place of the marker below, remove the hidden attribute. -->
+<section id="videos" hidden><div class="wrap">
   <span class="chip">Videos</span>
-  <h2>Watch the workflow explained</h2>
+  <h2>See the workflow explained</h2>
   <!-- VIDEOS -->
 </div></section>
 
 <footer>
   <div class="wrap">
     <div class="pill">Claude Code</div><div class="pill">Clay</div><div class="pill">CSV</div><div class="pill">LGPD</div>
-    <p style="margin-top:18px">Signal-Based Prospecting · open, free kit ·
+    <p style="margin-top:18px">Signal-Based Prospecting · open and free kit ·
       <a href="https://github.com/inematds/prospeccao-por-sinais">inematds/prospeccao-por-sinais</a> ·
       <a href="https://inema.club">INEMA.CLUB</a></p>
   </div>

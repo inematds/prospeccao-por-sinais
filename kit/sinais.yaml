@@ -69,6 +69,6 @@ sinais:
     como_detectar: "Notícia, página 'sobre' ou vagas em cidade nova."
     fonte_obrigatoria: true
 
-# Regra de prioridade sugerida:
+# Regra única de "empresa com sinal" (usada no CLAUDE.md e nos prompts):
 #   soma dos pesos dos sinais ativos >= 30  → buscar decisor
 #   soma < 30                               → não gastar crédito com pessoa; reavaliar no mês seguinte

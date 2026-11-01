@@ -18,8 +18,8 @@ funcionários e LinkedIn da empresa. Rode 10 linhas, me mostre e diga quanto cus
 
 ```text
 Para as empresas da tabela, configure no Clay o monitoramento de vagas abertas com estes cargos
-ou palavras: <engenheiro de IA, automação, machine learning, suporte técnico>. Use a janela de
-validade do sinal "contratacao_ia" em sinais.yaml. Para cada empresa, quero: sinal_presente
+ou palavras: <engenheiro de IA, automação, machine learning>. Use a janela de
+validade do sinal "contratacao_ia" em sinais.yaml. Para cada empresa, quero: contratacao_ia
 (sim/não), título da vaga, data e link. Teste em 10 empresas primeiro.
 ```
 
@@ -35,9 +35,9 @@ encontrou (sim/não), o que lançou (1 frase), data, link da fonte. Se não acha
 ## Passo 4 — Decisor só onde há sinal
 
 ```text
+Calcule, para cada empresa, a soma dos pesos dos sinais ativos (sinais.yaml, dentro da janela).
 Busque pessoas com os cargos <diretor(a) de operações, diretor(a) de suporte/CS, CTO>, mas só nas
-empresas com sinal_presente = sim (contratação ou lançamento). Empresas sem sinal ficam de fora e
-não gastam crédito. Mande os decisores para uma tabela nova. Teste em 10 empresas.
+empresas com soma >= 30 ("empresa com sinal"). As outras ficam de fora e não gastam crédito. Mande os decisores para uma tabela nova. Teste em 10 empresas.
 ```
 
 ## Passo 5 — Enriquecimento em cascata

@@ -88,7 +88,7 @@
   .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
   .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
   .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
-  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0;white-space:pre}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0;white-space:pre-wrap;overflow-wrap:anywhere}
   pre .c{color:#8a8a98} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
   .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
   .step>div,.card{min-width:0}
@@ -160,7 +160,7 @@
   <span class="chip">O problema e a ideia</span>
   <h2>Lista fria cansa todo mundo. Sinal abre conversa.</h2>
   <p class="sub">A prospecção comum compra uma lista, manda o mesmo texto para todos e torce. Quase ninguém responde, o domínio cai no spam e a marca fica com fama de chata.</p>
-  <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="assets/banner-grade.jpg" alt="As seis etapas: ICP, sinal, decisor, cascata, mensagem e revisão" loading="lazy" style="width:100%;display:block"></figure>
+  <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="assets/banner-grade.jpg" alt="Banner com os rótulos do fluxo: ICP, sinal, decisor, cascata, mensagem e revisão" loading="lazy" style="width:100%;display:block"></figure>
   <div class="grid g3">
     <div class="card"><h3>🧊 O problema</h3><p>Lista fria sem contexto, mensagem genérica feita por IA, dezenas de abas e ferramentas, e e-mail que vai direto para o spam.</p></div>
     <div class="card"><h3>📡 A ideia</h3><p>Prospectar por sinal: primeiro descobrir <em>quem tem um motivo para conversar agora</em>, depois achar a pessoa certa e falar desse motivo.</p></div>
@@ -190,14 +190,37 @@
     <div class="card"><div class="num">6</div><h3>Mensagem com contexto</h3><p>O Claude Code lê os arquivos do seu negócio e escreve assunto e corpo citando o sinal daquela empresa, com pergunta simples e opção de sair.</p></div>
     <div class="card"><div class="num">7</div><h3>Revisão humana + sequenciador</h3><p>Você revisa a planilha e só então importa no sequenciador, enviando de domínio aquecido e com poucos envios por dia.</p></div>
   </div>
+  <h3 style="margin:34px 0 12px;font-size:1.15rem">Palavras que aparecem no guia</h3>
+  <div class="tblwrap"><table class="tbl">
+    <tr><th>Termo</th><th>O que quer dizer</th></tr>
+    <tr><td>Terminal</td><td>A janela de comandos do computador (Terminal no Mac e no Linux; PowerShell no Windows). O Claude Code roda nela.</td></tr>
+    <tr><td>Plugin, marketplace, skill</td><td>Plugin é um pacote que ensina o Claude Code a usar uma ferramenta; marketplace é o catálogo de onde ele vem; skill é uma receita pronta dentro dele (ex.: <code>clay:setup</code>).</td></tr>
+    <tr><td>Crédito e ação</td><td>As moedas do Clay: crédito paga dados de fornecedores (e-mail, empresa, pessoa); ação paga a execução das etapas.</td></tr>
+    <tr><td>Sinal</td><td>Acontecimento público que mostra um motivo para conversar agora (vaga, lançamento, diretor novo, investimento).</td></tr>
+    <tr><td>Cascata</td><td>Vários fornecedores de dados consultados em sequência, até um achar o dado.</td></tr>
+    <tr><td>CTA</td><td>A chamada para ação no fim da mensagem. Aqui, sempre leve: uma pergunta simples.</td></tr>
+    <tr><td>Opt-out</td><td>A opção de sair: uma linha dizendo como parar de receber mensagens.</td></tr>
+    <tr><td>Sequenciador</td><td>Ferramenta que envia os e-mails da campanha aos poucos e manda os lembretes (follow-ups). O Clay tem um; também existem ferramentas separadas para isso.</td></tr>
+    <tr><td>Domínio secundário aquecido</td><td>Um endereço parecido com o da empresa (ex.: <code>contato-suaempresa.com.br</code>) usado só para prospecção, que começa enviando pouco e vai aumentando, para os provedores de e-mail confiarem nele. Se der problema, o domínio principal fica protegido.</td></tr>
+  </table></div>
 </div></section>
 
 <section id="pre"><div class="wrap">
   <span class="chip">Pré-requisitos</span>
   <h2>O que você precisa antes</h2>
-  <p class="sub">Três coisas. Nenhuma exige programar.</p>
-  <div class="grid g3">
-    <div class="card"><h3>Claude Code</h3><p>Versão 2.1.91 ou mais nova, que é a exigida pelo plugin do Clay. Confira no terminal:</p><pre><span class="k">claude</span> --version</pre></div>
+  <p class="sub">Nenhuma exige programar. Você vai digitar alguns comandos no terminal (a janela de comandos do computador).</p>
+  <div class="grid g2">
+    <div class="card"><h3>Claude Code</h3><p>O assistente da Anthropic que roda no terminal. Precisa de uma assinatura paga do Claude (veja os planos em <a href="https://claude.com/pricing" target="_blank" rel="noopener">claude.com/pricing</a>). O plugin do Clay exige a versão 2.1.91 ou mais nova. Instale e confira:</p><pre><span class="c"># instalar (Mac/Linux)</span>
+<span class="k">curl -fsSL</span> <span class="s">https://claude.ai/install.sh</span> | bash
+<span class="c"># Windows (PowerShell)</span>
+<span class="k">irm</span> <span class="s">https://claude.ai/install.ps1</span> | iex
+<span class="c"># ou, se você já tem Node.js</span>
+<span class="k">npm install -g</span> @anthropic-ai/claude-code
+<span class="c"># conferir a versão</span>
+<span class="k">claude</span> --version</pre><p class="src">Documentação oficial: <a href="https://docs.claude.com/en/docs/claude-code/overview" target="_blank" rel="noopener">Claude Code</a>.</p></div>
+    <div class="card"><h3>Git e Node.js (opcionais)</h3><p>O <strong>git</strong> serve para baixar o kit com <code>git clone</code>; sem ele, baixe o .zip. O <strong>Node.js</strong> (que traz o <code>npx</code>) só é usado no passo opcional da skill de sinais.</p><pre><span class="c"># conferir se já estão instalados</span>
+<span class="k">git</span> --version
+<span class="k">node</span> --version</pre><p class="src">Downloads: <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a> · <a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a>.</p></div>
     <div class="card"><h3>Conta no Clay</h3><p>Plano grátis (100 créditos/mês) ou teste de 14 dias (1.000 créditos). Dá para fazer o fluxo inteiro em escala pequena.</p><pre><span class="c"># crie a conta em</span>
 <span class="s">https://www.clay.com</span></pre></div>
     <div class="card"><h3>Contexto do seu negócio</h3><p>Uma tarde para preencher os 6 arquivos de <code>kit/contexto/</code>. Sem isso, a mensagem sai genérica.</p><pre><span class="c"># modelos + exemplo fictício</span>
@@ -215,7 +238,9 @@ kit/contexto/</pre></div>
     <p>O kit vira a pasta do seu projeto de prospecção. O <code>CLAUDE.md</code> dele já diz ao Claude Code como se comportar (não gastar crédito sem pedir, rodar 10 linhas antes, nunca enviar nada).</p>
 <pre><span class="k">git clone</span> <span class="s">https://github.com/inematds/prospeccao-por-sinais.git</span>
 <span class="k">cp -r</span> prospeccao-por-sinais/kit ~/minha-prospeccao
-<span class="k">cd</span> ~/minha-prospeccao <span class="k">&amp;&amp; claude</span></pre>
+<span class="k">cd</span> ~/minha-prospeccao
+<span class="k">claude</span></pre>
+    <p>Sem git: <a href="https://github.com/inematds/prospeccao-por-sinais/archive/refs/heads/main.zip">baixe o .zip</a>, descompacte, copie a pasta <code>kit</code> para onde quiser, abra o terminal nessa pasta e digite <code>claude</code>.</p>
   </div></div>
 
   <div class="step"><div class="b">2</div><div>
@@ -230,7 +255,7 @@ Rode a skill clay:setup e faça meu login no Clay.</pre>
 
   <div class="step"><div class="b">3</div><div>
     <h3>Preencha o contexto do negócio <span class="who">🧠 você</span></h3>
-    <p>Abra os 6 modelos de <code>contexto/</code> (perfil, oferta, casos, provas, FAQ, tom de voz). Use a pasta <code>contexto/exemplo/</code> (empresa fictícia) como referência. O agente não pode afirmar nada que não esteja em <code>provas.md</code>.</p>
+    <p>Abra os 6 modelos de <code>contexto/</code> (perfil, oferta, casos, provas, FAQ, tom de voz). Use a pasta <code>contexto/exemplo/</code> (empresa fictícia) como referência. O agente não pode afirmar nada que não esteja em <code>provas.md</code>. O exemplo vende para empresas de software; troque ICP, cargos e sinais pelos do seu mercado (para negócio local, veja a seção <a href="#brasil">Brasil</a>).</p>
 <pre><span class="c"># peça ajuda ao próprio Claude Code</span>
 Leia contexto/exemplo/ e me entreviste para preencher contexto/ com os dados da minha empresa.</pre>
   </div></div>
@@ -254,7 +279,7 @@ Me mostre o resultado e o custo estimado antes de rodar mais.</pre>
     <p>O <code>/goal</code> faz o Claude Code continuar até uma condição verificável ser verdadeira: N leads, colunas sem branco, e-mail verificado, assunto e corpo citando o sinal, CTA leve e CSV final. O prompt completo está em <code>prompts/goal-prospeccao.md</code>.</p>
 <pre><span class="k">/goal</span> Quero 25 leads novos de prospecção por sinal, prontos para revisão humana.
 ... (copie o resto de prompts/goal-prospeccao.md)</pre>
-    <p>Mesmo dentro do <code>/goal</code>, o <code>CLAUDE.md</code> manda o agente parar e pedir seu "pode" antes de cada passo que gasta crédito.</p>
+    <p>Mesmo dentro do <code>/goal</code>, o <code>CLAUDE.md</code> manda o agente parar e pedir seu "pode" antes de cada passo que gasta crédito. Se a sua versão do Claude Code não tiver o <code>/goal</code>, rode os prompts de <code>prompts/passo-a-passo.md</code> um de cada vez: o resultado é o mesmo.</p>
   </div></div>
 
   <div class="step"><div class="b">7</div><div>
@@ -267,7 +292,7 @@ link_fonte_sinal, gancho, assunto, corpo, revisar</pre>
 
   <div class="step"><div class="b">8</div><div>
     <h3>Importe no sequenciador e envie devagar <span class="who">🧠 você · ⚙️ sequenciador</span></h3>
-    <p>No Clay: importar dados, CSV, nova tabela, e depois criar a campanha usando essa tabela como lista. Envie de um domínio secundário já aquecido, com poucos envios por dia, e só aumente o volume aos poucos. Quem pedir para sair vai para <code>supressao.csv</code>.</p>
+    <p>O sequenciador é a ferramenta que envia a campanha aos poucos e manda os lembretes (veja <a href="#fluxo">Palavras que aparecem no guia</a>). No Clay: importar dados, CSV, nova tabela, e depois criar a campanha usando essa tabela como lista; ali também dá para comprar contas de envio. Envie de um domínio secundário já aquecido, com poucos envios por dia, e só aumente o volume aos poucos. Quem pedir para sair vai para <code>supressao.csv</code>.</p>
 <pre><span class="c"># regra prática</span>
 domínio secundário aquecido → poucos envios/dia → aumentar aos poucos
 taxa de spam abaixo de 0,3% (regra do Gmail para remetentes)</pre>
@@ -278,9 +303,9 @@ taxa de spam abaixo de 0,3% (regra do Gmail para remetentes)</pre>
 <section id="custos"><div class="wrap">
   <span class="chip">Custos</span>
   <h2>Quanto custa começar</h2>
-  <p class="sub">Dá para aprender o fluxo inteiro sem pagar nada. Os números abaixo são da documentação pública do Clay, conferidos em 01/11/2026. Preço muda: confira antes de assinar.</p>
+  <p class="sub">Do lado do Clay, dá para aprender o fluxo inteiro sem pagar nada. O Claude Code, o orquestrador, precisa de uma assinatura paga do Claude (<a href="https://claude.com/pricing" target="_blank" rel="noopener">planos</a>). Os números abaixo são da documentação pública do Clay, conferidos em 01/11/2026. Preço muda: confira antes de assinar.</p>
   <div class="grid g3">
-    <div class="card"><h3>Grátis</h3><p><strong>100 créditos por mês.</strong> Suficiente para testar 10 linhas em cada passo e entender o custo.</p></div>
+    <div class="card"><h3>Grátis</h3><p><strong>100 créditos por mês.</strong> Dá para testar algumas linhas em cada passo e ver, no próprio Clay, quanto cada passo gasta antes de crescer.</p></div>
     <div class="card"><h3>Teste de 14 dias</h3><p><strong>1.000 créditos.</strong> Bom para rodar o primeiro lote pequeno de verdade.</p></div>
     <div class="card"><h3>Plano Launch</h3><p><strong>A partir de US$ 185/mês</strong>, com 2.500 créditos e 15.000 ações. Só faz sentido quando o fluxo já provou que traz conversa.</p></div>
   </div>
@@ -303,7 +328,7 @@ taxa de spam abaixo de 0,3% (regra do Gmail para remetentes)</pre>
     <tr><td>E-mail em cascata</td><td>só decisores encontrados</td><td>para no primeiro e-mail válido</td></tr>
     <tr><td>Celular</td><td>só se você pedir</td><td>não sai no grátis/teste</td></tr>
   </table></div>
-  <p class="note">No <code>sinais.yaml</code> do kit, cada sinal tem um peso. Regra sugerida: só buscar decisor quando a soma dos pesos dos sinais ativos da empresa for 30 ou mais.</p>
+  <p class="note">"Empresa com sinal" tem uma definição só, a mesma no <code>CLAUDE.md</code>, nos prompts e no <code>sinais.yaml</code>: a soma dos pesos dos sinais ativos (dentro da janela de validade) é 30 ou mais. Ajuste esse número no <code>sinais.yaml</code> se quiser ser mais ou menos rigoroso.</p>
 </div></section>
 
 <section id="brasil"><div class="wrap">
@@ -365,7 +390,8 @@ taxa de spam abaixo de 0,3% (regra do Gmail para remetentes)</pre>
   </div>
 </div></section>
 
-<section id="videos"><div class="wrap">
+<!-- Seção Vídeos: fica oculta (hidden) até entrarem os embeds do YouTube. Ao colar os embeds no lugar do marcador abaixo, remova o atributo hidden. -->
+<section id="videos" hidden><div class="wrap">
   <span class="chip">Vídeos</span>
   <h2>Veja o fluxo explicado</h2>
   <!-- VIDEOS -->

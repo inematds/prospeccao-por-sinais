@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prospección por Señales — prospección B2B con Claude Code y Clay</title>
-<meta name="description" content="Kit y guía para prospectar empresas a partir de la señal adecuada: Claude Code coordina el proceso, Clay aporta los datos y tú los revisas. Incluye modelos de contexto, prompts, señales.yaml y checklist de LGPD.">
-<meta property="og:title" content="Prospección por Señales — INEMA.CLUB">
+<title>Prospección por señales — prospección B2B con Claude Code y Clay</title>
+<meta name="description" content="Kit y guía para prospectar empresas con la señal adecuada: Claude Code coordina, Clay aporta los datos y tú revisas. Incluye modelos de contexto, prompts, señales.yaml y una lista de verificación de la LGPD brasileña.">
+<meta property="og:title" content="Prospección por señales — INEMA.CLUB">
 <meta property="og:description" content="Contacta solo a quienes están listos para comprar: prospección B2B basada en señales con Claude Code y Clay.">
 <meta property="og:image" content="https://inematds.github.io/prospeccao-por-sinais/capa/capa.png">
 <link rel="alter&#110;ate" hreflang="pt-BR" href="https://inematds.github.io/prospeccao-por-sinais/guia/">
@@ -88,7 +88,7 @@
   .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
   .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
   .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
-  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0;white-space:pre}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0;white-space:pre-wrap;overflow-wrap:anywhere}
   pre .c{color:#8a8a98} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
   .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
   .step>div,.card{min-width:0}
@@ -116,7 +116,7 @@
 <body>
 
 <nav><div class="wrap">
-  <a class="brand" href="#top"><span class="emoji">📡</span> Prospección por Señales</a>
+  <a class="brand" href="#top"><span class="emoji">📡</span> Prospección por señales</a>
   <span class="sep">|</span>
   <span class="clubpro">
     <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
@@ -141,66 +141,89 @@
     <div>
       <span class="chip">Kit + guía · ventas B2B con IA</span>
       <h1>Contacta solo a quienes están <span class="amb">listos</span> para comprar</h1>
-      <p class="lead">La prospección B2B empieza por un motivo real: Claude Code coordina el proceso, Clay aporta los datos y tú los revisas antes de enviar.</p>
+      <p class="lead">La prospección B2B empieza con un motivo real: Claude Code coordina, Clay aporta los datos y tú revisas antes de enviar.</p>
       <div class="cta">
         <a class="btn" href="#guia">Empezar la guía</a>
         <a class="btn ghost" href="#kit">Descargar el kit</a>
       </div>
     </div>
-    <figure><img src="../assets/banner-es.jpg" alt="Banner: Prospección por Señales — contacta solo a quienes están listos para comprar"></figure>
+    <figure><img src="../assets/banner-es.jpg" alt="Banner: Prospección por señales — contacta solo a quienes están listos para comprar"></figure>
   </div>
 </header>
 
 <section id="resumo" class="resumo"><div class="wrap">
   <span class="chip">En resumen</span>
-  <p>Este es un kit gratuito para quienes venden a empresas y quieren prospectar sin enviar correos a listas frías. La idea es buscar <strong>señales</strong>, es decir, acontecimientos públicos que muestran que una empresa podría necesitarte ahora (una vacante abierta, un producto lanzado, un nuevo director), y solo entonces encontrar a quien toma las decisiones y escribir un mensaje que mencione esa señal. Claude Code hace el trabajo pesado con Clay (una plataforma de datos de empresas y contactos) y te entrega una hoja de cálculo para que la revises. Necesitas Claude Code, una cuenta de Clay (hay un plan gratuito y un periodo de prueba) y una tarde para completar el contexto de tu negocio.</p>
+  <p>Este kit gratuito es para quienes venden a empresas y quieren prospectar sin enviar correos a listas frías. La idea es buscar <strong>señales</strong>, es decir, hechos públicos que muestran que una empresa podría necesitarte ahora (una vacante abierta, el lanzamiento de un producto, un nuevo director), y solo entonces encontrar a la persona que toma la decisión y escribir un mensaje que mencione esa señal. Claude Code hace el trabajo pesado con Clay (una plataforma de datos de empresas y contactos) y te entrega una hoja de cálculo para que la revises. Necesitas Claude Code, una cuenta de Clay (hay un plan gratis y una prueba) y una tarde para completar el contexto de tu negocio.</p>
 </div></section>
 
 <section id="oque"><div class="wrap">
   <span class="chip">El problema y la idea</span>
   <h2>Las listas frías cansan a todos. Una señal abre la conversación.</h2>
-  <p class="sub">La prospección habitual consiste en comprar una lista, enviar el mismo texto a todos y cruzar los dedos. Casi nadie responde, el dominio acaba en spam y la marca se gana fama de molesta.</p>
-  <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="../assets/banner-grade-es.jpg" alt="Las seis etapas: ICP, señal, decisor, cascada, mensaje y revisión" loading="lazy" style="width:100%;display:block"></figure>
+  <p class="sub">La prospección habitual compra una lista, envía el mismo texto a todos y cruza los dedos. Casi nadie responde, el dominio acaba en spam y la marca se gana fama de molesta.</p>
+  <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="../assets/banner-grade-es.jpg" alt="Banner con las etiquetas del flujo: ICP, señal, persona que decide, cascada, mensaje y revisión" loading="lazy" style="width:100%;display:block"></figure>
   <div class="grid g3">
-    <div class="card"><h3>🧊 El problema</h3><p>Lista fría sin contexto, mensaje genérico hecho con IA, decenas de pestañas y herramientas, y un correo que va directo a spam.</p></div>
+    <div class="card"><h3>🧊 El problema</h3><p>Lista fría sin contexto, mensaje genérico creado por IA, decenas de pestañas y herramientas, y un correo que llega directo a spam.</p></div>
     <div class="card"><h3>📡 La idea</h3><p>Prospectar a partir de señales: primero descubrir <em>quién tiene un motivo para conversar ahora</em>, luego encontrar a la persona adecuada y hablar de ese motivo.</p></div>
-    <div class="card"><h3>🧠 La división del trabajo</h3><p>Clay resuelve el problema de los datos (empresas, vacantes, correos). Claude Code resuelve el problema de las herramientas: tú le pides en portugués y él las opera. Tú revisas y decides.</p></div>
+    <div class="card"><h3>🧠 Cómo se divide el trabajo</h3><p>Clay resuelve el problema de los datos (empresas, vacantes, correos). Claude Code resuelve el problema de las herramientas: tú le pides algo en español y él lo ejecuta. Tú revisas y decides.</p></div>
   </div>
 </div></section>
 
 <section id="fluxo"><div class="wrap">
   <span class="chip">Cómo funciona</span>
-  <h2>Los 7 pasos del proceso</h2>
-  <p class="sub">Cada paso filtra el anterior. Los créditos más costosos (persona, correo) solo se usan en las empresas que pasaron el filtro de señales.</p>
+  <h2>Los 7 pasos del flujo</h2>
+  <p class="sub">Cada paso filtra el anterior. Los créditos más costosos (persona, correo) solo se gastan en las empresas que dieron la señal.</p>
   <div class="flow">
     <span>1 · ICP</span><span class="arr">→</span>
     <span>2 · Señal de contratación</span><span class="arr">→</span>
     <span>3 · Agente de investigación</span><span class="arr">→</span>
-    <span>4 · Decisor</span><span class="arr">→</span>
+    <span>4 · Persona que decide</span><span class="arr">→</span>
     <span>5 · Cascada</span><span class="arr">→</span>
     <span>6 · Mensaje</span><span class="arr">→</span>
     <span>7 · Revisión + envío</span>
   </div>
   <div class="grid g3" style="margin-top:26px">
-    <div class="card"><div class="num">1</div><h3>ICP: la lista de empresas</h3><p>ICP es el perfil del cliente ideal. Defines sector, tamaño y país; Clay devuelve las empresas que cumplen esos criterios.</p></div>
-    <div class="card"><div class="num">2</div><h3>Señal de contratación</h3><p>Clay monitorea vacantes abiertas para los cargos que te interesan. Una vacante de IA, por ejemplo, indica que podría estar empezando un proyecto de IA.</p></div>
+    <div class="card"><div class="num">1</div><h3>ICP: la lista de empresas</h3><p>ICP es el perfil del cliente ideal. Defines el sector, el tamaño y el país; Clay devuelve las empresas que encajan.</p></div>
+    <div class="card"><div class="num">2</div><h3>Señal de contratación</h3><p>Clay monitorea las vacantes abiertas con los cargos que te interesan. Una vacante de IA, por ejemplo, indica que podría estar empezando un proyecto de IA.</p></div>
     <div class="card"><div class="num">3</div><h3>Agente de investigación</h3><p>Una columna con un agente de IA lee el sitio web, el blog y las noticias, y responde con un enlace: ¿la empresa lanzó un producto nuevo en los últimos meses?</p></div>
-    <div class="card"><div class="num">4</div><h3>Buscar decisores solo cuando hay señales</h3><p>La búsqueda de personas tiene una <strong>condición de ejecución</strong>: solo se activa en empresas con señales. Así ahorras créditos.</p></div>
-    <div class="card"><div class="num">5</div><h3>Enriquecimiento en cascada</h3><p>Varios proveedores de correo en secuencia; la cascada se detiene en el primer resultado válido. Después, se verifica el correo.</p></div>
-    <div class="card"><div class="num">6</div><h3>Mensaje con contexto</h3><p>Claude Code lee los archivos de tu negocio y redacta el asunto y el cuerpo mencionando la señal de esa empresa, con una pregunta sencilla y una opción para darse de baja.</p></div>
-    <div class="card"><div class="num">7</div><h3>Revisión humana + plataforma de secuencias</h3><p>Revisas la hoja de cálculo y solo entonces la importas a la plataforma de secuencias; envías desde un dominio con buena reputación y pocos correos al día.</p></div>
+    <div class="card"><div class="num">4</div><h3>Busca a la persona que decide solo cuando hay una señal</h3><p>La búsqueda de personas tiene una <strong>condición de ejecución</strong>: solo se ejecuta en empresas con una señal. Así ahorras créditos.</p></div>
+    <div class="card"><div class="num">5</div><h3>Enriquecimiento en cascada</h3><p>Se consultan varios proveedores de correo en secuencia; la cascada se detiene en el primer resultado válido. Después se verifica el correo.</p></div>
+    <div class="card"><div class="num">6</div><h3>Mensaje con contexto</h3><p>Claude Code lee los archivos de tu negocio y redacta el asunto y el cuerpo mencionando la señal de esa empresa, con una pregunta sencilla y la opción de dejar de recibir mensajes.</p></div>
+    <div class="card"><div class="num">7</div><h3>Revisión humana + herramienta de secuencias</h3><p>Revisas la hoja de cálculo y solo entonces la importas a la herramienta de secuencias, para enviar desde un dominio con buena reputación y pocos correos al día.</p></div>
   </div>
+  <h3 style="margin:34px 0 12px;font-size:1.15rem">Palabras que aparecen en la guía</h3>
+  <div class="tblwrap"><table class="tbl">
+    <tr><th>Término</th><th>Qué significa</th></tr>
+    <tr><td>Terminal</td><td>La ventana de comandos de la computadora (Terminal en Mac y Linux; PowerShell en Windows). Claude Code funciona allí.</td></tr>
+    <tr><td>Plugin, marketplace, skill</td><td>Un plugin es un paquete que enseña a Claude Code a usar una herramienta; un marketplace es el catálogo del que proviene; una skill es una receta lista para usar que está dentro del plugin (por ejemplo, <code>clay:setup</code>).</td></tr>
+    <tr><td>Crédito y acción</td><td>Las monedas de Clay: los créditos pagan datos de proveedores (correo, empresa, persona); las acciones pagan la ejecución de las etapas.</td></tr>
+    <tr><td>Señal</td><td>Un hecho público que muestra que hay un motivo para conversar ahora (vacante, lanzamiento, nuevo director, inversión).</td></tr>
+    <tr><td>Cascada</td><td>Consulta a varios proveedores de datos en secuencia hasta que uno encuentra el dato.</td></tr>
+    <tr><td>CTA</td><td>La llamada a la acción al final del mensaje. Aquí siempre es sencilla: una pregunta breve.</td></tr>
+    <tr><td>Opción de salida</td><td>Una línea que indica cómo dejar de recibir mensajes.</td></tr>
+    <tr><td>Herramienta de secuencias</td><td>Herramienta que envía los correos de la campaña poco a poco y envía recordatorios (seguimientos). Clay incluye una; también hay herramientas independientes.</td></tr>
+    <tr><td>Dominio secundario con buena reputación</td><td>Una dirección parecida a la de la empresa (por ejemplo, <code>contacto-tuempresa.com</code>) que se usa solo para prospectar. Empieza enviando pocos correos y aumenta el volumen gradualmente para que los proveedores de correo confíen en él. Si surge un problema, el dominio principal queda protegido.</td></tr>
+  </table></div>
 </div></section>
 
 <section id="pre"><div class="wrap">
   <span class="chip">Requisitos previos</span>
-  <h2>Lo que necesitas antes de empezar</h2>
-  <p class="sub">Tres cosas. Ninguna requiere programar.</p>
-  <div class="grid g3">
-    <div class="card"><h3>Claude Code</h3><p>Versión 2.1.91 o posterior, requerida por el plugin de Clay. Comprueba la versión en la terminal:</p><pre><span class="k">claude</span> --version</pre></div>
-    <div class="card"><h3>Cuenta de Clay</h3><p>Plan gratuito (100 créditos al mes) o prueba de 14 días (1.000 créditos). Puedes completar todo el proceso a pequeña escala.</p><pre><span class="c"># crea una cuenta en</span>
+  <h2>Qué necesitas antes de empezar</h2>
+  <p class="sub">No necesitas programar. Escribirás algunos comandos en la terminal (la ventana de comandos de la computadora).</p>
+  <div class="grid g2">
+    <div class="card"><h3>Claude Code</h3><p>El asistente de Anthropic que funciona en la terminal. Necesitas una suscripción paga de Claude (consulta los planes en <a href="https://claude.com/pricing" target="_blank" rel="noopener">claude.com/pricing</a>). El plugin de Clay requiere la versión 2.1.91 o posterior. Instálalo y comprueba la versión:</p><pre><span class="c"># instalar (Mac/Linux)</span>
+<span class="k">curl -fsSL</span> <span class="s">https://claude.ai/install.sh</span> | bash
+<span class="c"># Windows (PowerShell)</span>
+<span class="k">irm</span> <span class="s">https://claude.ai/install.ps1</span> | iex
+<span class="c"># o, si ya tienes Node.js</span>
+<span class="k">npm install -g</span> @anthropic-ai/claude-code
+<span class="c"># comprobar la versión</span>
+<span class="k">claude</span> --version</pre><p class="src">Documentación oficial: <a href="https://docs.claude.com/en/docs/claude-code/overview" target="_blank" rel="noopener">Claude Code</a>.</p></div>
+    <div class="card"><h3>Git y Node.js (opcionales)</h3><p><strong>git</strong> sirve para descargar el kit con <code>git clone</code>; si no lo tienes, descarga el archivo .zip. <strong>Node.js</strong> (que incluye <code>npx</code>) solo se usa en el paso opcional de la skill de señales.</p><pre><span class="c"># comprueba si ya están instalados</span>
+<span class="k">git</span> --version
+<span class="k">node</span> --version</pre><p class="src">Descargas: <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a> · <a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a>.</p></div>
+    <div class="card"><h3>Cuenta de Clay</h3><p>Plan gratis (100 créditos al mes) o prueba de 14 días (1.000 créditos). Puedes completar todo el flujo a pequeña escala.</p><pre><span class="c"># crea la cuenta en</span>
 <span class="s">https://www.clay.com</span></pre></div>
-    <div class="card"><h3>Contexto de tu negocio</h3><p>Una tarde para completar los 6 archivos de <code>kit/contexto/</code>. Sin eso, el mensaje queda genérico.</p><pre><span class="c"># modelos + ejemplo ficticio</span>
+    <div class="card"><h3>Contexto de tu negocio</h3><p>Reserva una tarde para completar los 6 archivos de <code>kit/contexto/</code> (en portugués). Sin esa información, el mensaje será genérico.</p><pre><span class="c"># modelos + ejemplo ficticio</span>
 kit/contexto/</pre></div>
   </div>
 </div></section>
@@ -212,15 +235,17 @@ kit/contexto/</pre></div>
 
   <div class="step"><div class="b">1</div><div>
     <h3>Descarga el kit y abre Claude Code en la carpeta <span class="who">🧠 tú</span></h3>
-    <p>El kit se convierte en la carpeta de tu proyecto de prospección. Su <code>CLAUDE.md</code> ya le indica a Claude Code cómo debe comportarse (no gastar créditos sin pedir permiso, ejecutar 10 filas antes, nunca enviar nada).</p>
+    <p>El kit será la carpeta de tu proyecto de prospección. Su archivo <code>CLAUDE.md</code> ya le indica a Claude Code cómo comportarse (no gastar créditos sin pedirte permiso, ejecutar 10 filas primero, nunca enviar nada).</p>
 <pre><span class="k">git clone</span> <span class="s">https://github.com/inematds/prospeccao-por-sinais.git</span>
-<span class="k">cp -r</span> prospeccao-por-sinais/kit ~/minha-prospeccao
-<span class="k">cd</span> ~/minha-prospeccao <span class="k">&amp;&amp; claude</span></pre>
+<span class="k">cp -r</span> prospeccao-por-sinais/kit ~/mi-prospeccion
+<span class="k">cd</span> ~/mi-prospeccion
+<span class="k">claude</span></pre>
+    <p>Si no tienes git: <a href="https://github.com/inematds/prospeccao-por-sinais/archive/refs/heads/main.zip">descarga el archivo .zip</a>, descomprímelo, copia la carpeta <code>kit</code> donde quieras, abre la terminal en esa carpeta y escribe <code>claude</code>.</p>
   </div></div>
 
   <div class="step"><div class="b">2</div><div>
     <h3>Instala el plugin oficial de Clay <span class="who">🧠 tú</span></h3>
-    <p>Dentro de Claude Code, agrega el marketplace e instala el plugin. Después, pídele que ejecute la skill de configuración, que instala la línea de comandos <code>clay</code> e inicia sesión.</p>
+    <p>Dentro de Claude Code, agrega el marketplace e instala el plugin. Luego pídele que ejecute la skill de configuración, que instala la línea de comandos <code>clay</code> e inicia sesión.</p>
 <pre><span class="k">/plugin marketplace add</span> clay-run/agent-plugins
 <span class="k">/plugin install</span> clay@clay-plugins
 <span class="c"># después, en español:</span>
@@ -230,102 +255,102 @@ Ejecuta la skill clay:setup e inicia sesión en Clay por mí.</pre>
 
   <div class="step"><div class="b">3</div><div>
     <h3>Completa el contexto del negocio <span class="who">🧠 tú</span></h3>
-    <p>Abre los 6 modelos de <code>contexto/</code> (perfil, oferta, casos, pruebas, FAQ, tono de voz). Usa la carpeta <code>contexto/exemplo/</code> (empresa ficticia) como referencia. El agente no puede afirmar nada que no esté en <code>provas.md</code>.</p>
+    <p>Abre los 6 modelos de <code>contexto/</code> (perfil, oferta, casos, pruebas, preguntas frecuentes, tono de voz) (en portugués). Usa la carpeta <code>contexto/exemplo/</code> (en portugués; contiene una empresa ficticia) como referencia. El agente no puede afirmar nada que no esté en <code>provas.md</code> (en portugués). El ejemplo es para una empresa de software; cambia el ICP, los cargos y las señales según tu mercado (para un negocio local, consulta la sección <a href="#brasil">Brasil</a>).</p>
 <pre><span class="c"># pide ayuda al propio Claude Code</span>
 Lee contexto/exemplo/ y entrevístame para completar contexto/ con los datos de mi empresa.</pre>
   </div></div>
 
   <div class="step"><div class="b">4</div><div>
     <h3>Define tus señales <span class="who">🧠 tú + 🤖 agente</span></h3>
-    <p>Edita <code>sinais.yaml</code>: cada señal tiene un periodo de vigencia en días y un peso. Si quieres ayuda para descubrir qué señales importan en tu mercado, hay una skill pública para generar señales:</p>
+    <p>Edita <code>sinais.yaml</code> (en portugués): cada señal tiene un plazo de validez en días y un peso. Si quieres ayuda para descubrir qué señales importan en tu mercado, hay una skill pública para generar señales:</p>
 <pre><span class="c"># opcional, en la terminal</span>
 <span class="k">npx skills add</span> clay-run/clay-skill-creator --skill customer-signal-generator</pre>
   </div></div>
 
   <div class="step"><div class="b">5</div><div>
     <h3>Prueba con 10 filas <span class="who">🤖 agente · ⚙️ Clay</span></h3>
-    <p>Antes de procesar cualquier lote, ejecuta los pasos 1 y 2 del proceso con 10 empresas. Revisa cuántas tienen señales y cuántas tendrían un correo verificado. Los prompts de cada paso están en <code>prompts/passo-a-passo.md</code>.</p>
-<pre>Sigue el Paso 1 y el Paso 2 de prompts/passo-a-passo.md con 10 empresas.
-Muéstrame el resultado y el costo estimado antes de procesar más.</pre>
+    <p>Antes de ejecutar cualquier lote, sigue los pasos 1 y 2 del flujo con 10 empresas. Revisa cuántas tienen una señal y cuántas personas tendrían un correo verificado. Los prompts para cada paso están en <code>prompts/passo-a-passo.md</code> (en portugués).</p>
+<pre>Sigue los pasos 1 y 2 de prompts/passo-a-passo.md en 10 empresas.
+Muéstrame el resultado y el costo estimado antes de ejecutar más.</pre>
   </div></div>
 
   <div class="step"><div class="b">6</div><div>
-    <h3>Ejecuta /goal con una condición de cierre <span class="who">🤖 agente · ⚙️ Clay</span></h3>
-    <p><code>/goal</code> hace que Claude Code continúe hasta que se cumpla una condición verificable: N leads, columnas completas, correo verificado, asunto y cuerpo que mencionen la señal, CTA breve y CSV final. El prompt completo está en <code>prompts/goal-prospeccao.md</code>.</p>
-<pre><span class="k">/goal</span> Quiero 25 leads nuevos de prospección basada en señales, listos para revisión humana.
+    <h3>Ejecuta /goal con un objetivo verificable <span class="who">🤖 agente · ⚙️ Clay</span></h3>
+    <p><code>/goal</code> hace que Claude Code continúe hasta que se cumpla una condición verificable: N leads, columnas completas, correo verificado, asunto y cuerpo que mencionen la señal, una CTA sencilla y un CSV final. El prompt completo está en <code>prompts/goal-prospeccao.md</code> (en portugués).</p>
+<pre><span class="k">/goal</span> Quiero 25 leads nuevos para prospectar a partir de señales, listos para revisión humana.
 ... (copia el resto de prompts/goal-prospeccao.md)</pre>
-    <p>Incluso dentro de <code>/goal</code>, <code>CLAUDE.md</code> indica al agente que debe detenerse y pedirte permiso antes de cada paso que consuma créditos.</p>
+    <p>Incluso dentro de <code>/goal</code>, el <code>CLAUDE.md</code> le indica al agente que se detenga y te pida permiso antes de cada paso que consuma créditos. Si tu versión de Claude Code no incluye <code>/goal</code>, ejecuta los prompts de <code>prompts/passo-a-passo.md</code> (en portugués) uno por uno: obtendrás el mismo resultado.</p>
   </div></div>
 
   <div class="step"><div class="b">7</div><div>
     <h3>Revisa la hoja de cálculo <span class="who">🧠 tú</span></h3>
-    <p>Abre <code>saida/leads-AAAA-MM-DD.csv</code>. Las columnas están en <code>colunas-csv.md</code>. Empieza por las filas con <code>revisar = sim</code>, lee cada mensaje y comprueba el enlace de la señal.</p>
+    <p>Abre <code>saida/leads-AAAA-MM-DD.csv</code>. Las columnas están en <code>colunas-csv.md</code> (en portugués). Empieza por las filas con <code>revisar = sim</code>, lee cada mensaje y comprueba el enlace de la señal.</p>
 <pre><span class="c"># columnas principales</span>
 empresa, decisor, cargo, email, email_status, sinal, resumo_sinal,
 link_fonte_sinal, gancho, assunto, corpo, revisar</pre>
   </div></div>
 
   <div class="step"><div class="b">8</div><div>
-    <h3>Importa a la plataforma de secuencias y envía poco a poco <span class="who">🧠 tú · ⚙️ plataforma de secuencias</span></h3>
-    <p>En Clay: importa los datos, elige CSV y crea una tabla nueva; después crea la campaña usando esa tabla como lista. Envía desde un dominio secundario con buena reputación, con pocos correos al día, y aumenta el volumen poco a poco. Quienes pidan darse de baja pasan a <code>supressao.csv</code>.</p>
+    <h3>Importa los datos a la herramienta de secuencias y envía poco a poco <span class="who">🧠 tú · ⚙️ herramienta de secuencias</span></h3>
+    <p>La herramienta de secuencias envía la campaña poco a poco y manda recordatorios (consulta <a href="#fluxo">Palabras que aparecen en la guía</a>). En Clay: importa los datos desde un CSV en una tabla nueva y luego crea la campaña usando esa tabla como lista; allí también puedes comprar cuentas de envío. Envía desde un dominio secundario con buena reputación, con pocos correos al día, y aumenta el volumen poco a poco. Quienes pidan dejar de recibir mensajes se agregan a <code>supressao.csv</code> (en portugués).</p>
 <pre><span class="c"># regla práctica</span>
-dominio secundario con buena reputación → pocos correos/día → aumentar poco a poco
-tasa de spam por debajo de 0,3% (regla de Gmail para remitentes)</pre>
-    <p class="src">Gmail: <a href="https://support.google.com/a/answer/81126?hl=es" target="_blank" rel="noopener">directrices para remitentes de correo electrónico</a> (tasa de spam por debajo de 0,3% y aumento gradual del volumen).</p>
+dominio secundario con buena reputación → pocos correos al día → aumentar poco a poco
+tasa de spam inferior al 0,3% (regla de Gmail para remitentes)</pre>
+    <p class="src">Gmail: <a href="https://support.google.com/a/answer/81126?hl=es" target="_blank" rel="noopener">directrices para remitentes de correo</a> (tasa de spam inferior al 0,3% y aumento gradual del volumen).</p>
   </div></div>
 </div></section>
 
 <section id="custos"><div class="wrap">
   <span class="chip">Costos</span>
   <h2>Cuánto cuesta empezar</h2>
-  <p class="sub">Puedes aprender todo el proceso sin pagar. Las cifras de abajo provienen de la documentación pública de Clay, consultada el 01/11/2026. Los precios cambian: compruébalos antes de suscribirte.</p>
+  <p class="sub">Con Clay, puedes aprender todo el flujo sin pagar. Claude Code, el orquestador, requiere una suscripción paga de Claude (<a href="https://claude.com/pricing" target="_blank" rel="noopener">planes</a>). Las cifras que aparecen aquí provienen de la documentación pública de Clay, consultada el 01/11/2026. Los precios pueden cambiar: compruébalos antes de suscribirte.</p>
   <div class="grid g3">
-    <div class="card"><h3>Gratis</h3><p><strong>100 créditos al mes.</strong> Suficientes para probar 10 filas en cada paso y entender el costo.</p></div>
-    <div class="card"><h3>Prueba de 14 días</h3><p><strong>1.000 créditos.</strong> Ideal para ejecutar el primer lote pequeño real.</p></div>
-    <div class="card"><h3>Plan Launch</h3><p><strong>Desde US$ 185 al mes</strong>, con 2.500 créditos y 15.000 acciones. Solo tiene sentido cuando el proceso ya demostró que genera conversaciones.</p></div>
+    <div class="card"><h3>Gratis</h3><p><strong>100 créditos al mes.</strong> Puedes probar algunas filas de cada paso y revisar en Clay cuánto consume cada uno antes de ampliar el volumen.</p></div>
+    <div class="card"><h3>Prueba de 14 días</h3><p><strong>1.000 créditos.</strong> Sirve para ejecutar tu primer lote pequeño real.</p></div>
+    <div class="card"><h3>Plan Launch</h3><p><strong>Desde US$ 185 al mes</strong>, con 2.500 créditos y 15.000 acciones. Solo tiene sentido cuando el flujo ya demostró que genera conversaciones.</p></div>
   </div>
   <div class="grid g2" style="margin-top:16px">
-    <div class="card"><h3>💡 Créditos que se devuelven</h3><p>En la cascada, los proveedores estándar de correo y celular <strong>devuelven el crédito cuando no encuentran</strong> el dato. Además, la cascada se detiene en el primer resultado válido.</p></div>
-    <div class="card"><h3>📵 Al principio, no busques celulares</h3><p>La búsqueda de celulares <strong>no está disponible en el plan gratuito ni durante la prueba</strong>. Empieza solo con correos.</p></div>
+    <div class="card"><h3>💡 Créditos que se devuelven</h3><p>En la cascada, los proveedores habituales de correo y celular <strong>devuelven el crédito si no encuentran</strong> el dato. Además, la cascada se detiene al encontrar el primer resultado válido.</p></div>
+    <div class="card"><h3>📵 Al principio, deja el celular fuera</h3><p>La búsqueda de celulares <strong>no está disponible en el plan gratis ni durante la prueba</strong>. Empieza solo con correos.</p></div>
   </div>
-  <p class="src">Fuentes: <a href="https://github.com/clay-run/public-docs" target="_blank" rel="noopener">documentación pública de Clay</a> (planes y cobros; cómo configurar una cascada de datos).</p>
+  <p class="src">Fuentes: <a href="https://github.com/clay-run/public-docs" target="_blank" rel="noopener">documentación pública de Clay</a> (planes y cobros; cómo crear una cascada de datos).</p>
 </div></section>
 
 <section id="economia"><div class="wrap">
   <span class="chip">Ahorro de créditos</span>
-  <h2>La regla que más ahorra: condición de ejecución</h2>
-  <p class="sub">Lo más costoso es buscar personas y correos. Por eso, esa búsqueda solo se activa cuando vale la pena.</p>
+  <h2>La regla que más ahorra: la condición de ejecución</h2>
+  <p class="sub">Lo que más cuesta es buscar personas y correos. Por eso, esa búsqueda solo se ejecuta cuando vale la pena.</p>
   <div class="tblwrap"><table class="tbl">
     <tr><th>Etapa</th><th>Se ejecuta en</th><th>Por qué</th></tr>
     <tr><td>Lista de empresas (ICP)</td><td>todas las del filtro</td><td>es la base; prueba con 10 antes</td></tr>
     <tr><td>Señal de contratación y agente de investigación</td><td>todas las empresas de la lista</td><td>separa a quienes tienen un motivo para conversar ahora</td></tr>
-    <tr><td>Búsqueda de decisores</td><td><strong>solo empresas con señales</strong></td><td>una empresa sin señales no consume créditos en buscar personas</td></tr>
-    <tr><td>Correo en cascada</td><td>solo decisores encontrados</td><td>se detiene en el primer correo válido</td></tr>
-    <tr><td>Celular</td><td>solo si lo pides</td><td>no está disponible en el plan gratuito ni en la prueba</td></tr>
+    <tr><td>Búsqueda de la persona que decide</td><td><strong>solo empresas con una señal</strong></td><td>una empresa sin señal no gasta créditos en buscar personas</td></tr>
+    <tr><td>Correo en cascada</td><td>solo las personas encontradas</td><td>se detiene al encontrar el primer correo válido</td></tr>
+    <tr><td>Celular</td><td>solo si lo pides</td><td>no está disponible en el plan gratis ni durante la prueba</td></tr>
   </table></div>
-  <p class="note">En <code>sinais.yaml</code> del kit, cada señal tiene un peso. Regla sugerida: busca decisores solo cuando la suma de los pesos de las señales activas de la empresa sea de 30 o más.</p>
+  <p class="note">«Empresa con señal» tiene una sola definición, igual en <code>CLAUDE.md</code>, en los prompts y en <code>sinais.yaml</code> (en portugués): la suma de los pesos de las señales activas (dentro del plazo de validez) es de 30 o más. Cambia ese número en <code>sinais.yaml</code> si quieres ser más o menos estricto.</p>
 </div></section>
 
 <section id="brasil"><div class="wrap">
   <span class="chip">Brasil</span>
   <h2>Uso en Brasil: LGPD y cobertura de datos</h2>
-  <p class="sub">El proceso funciona aquí, con dos precauciones.</p>
+  <p class="sub">El flujo funciona aquí, con dos precauciones.</p>
   <div class="grid g2">
-    <div class="card"><h3>⚖️ LGPD</h3><p>La prospección B2B suele basarse en el interés legítimo. En la práctica:</p>
+    <div class="card"><h3>⚖️ LGPD brasileña</h3><p>La prospección B2B suele basarse en el interés legítimo. En la práctica:</p>
       <ul>
-        <li>contacto pertinente para el cargo de la persona;</li>
+        <li>contacto relevante para el cargo de la persona;</li>
         <li>identificación clara de quien escribe;</li>
-        <li>una opción sencilla para darse de baja en cada mensaje;</li>
-        <li>respeto permanente de la lista de supresión;</li>
+        <li>opción sencilla para dejar de recibir mensajes en cada correo;</li>
+        <li>respeto permanente por la lista de supresión;</li>
         <li>ningún dato personal sensible;</li>
         <li>registro del origen de cada dato.</li>
       </ul>
-      <p style="margin-top:.6em">El kit incluye <code>checklist-lgpd.md</code>. No es asesoría jurídica: consúltalo con tu equipo legal. Referencias: <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener">Ley 13.709/2018</a> y <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">ANPD</a>, autoridad brasileña de protección de datos.</p></div>
-    <div class="card"><h3>🗺️ La cobertura de datos varía según el país</h3><p>Las bases de datos tienen distinta cobertura en cada país y sector. Por eso:</p>
+      <p style="margin-top:.6em">El kit incluye <code>checklist-lgpd.md</code> (en portugués). No es una opinión jurídica: consulta con tu equipo legal. Referencias: <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener">Ley brasileña 13.709/2018</a> y <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">ANPD, la autoridad brasileña de protección de datos</a>.</p></div>
+    <div class="card"><h3>🗺️ La cobertura de datos varía según el país</h3><p>Las bases de datos tienen distinta cobertura según el país y el sector. Por eso:</p>
       <ul>
-        <li>prueba siempre 10 filas y comprueba cuántas tienen un correo verificado;</li>
-        <li>si la base es limitada, pide al agente que busque en el sitio de la empresa (página de contacto, equipo);</li>
-        <li>para una pequeña empresa local (clínica, tienda, despacho), usa Google Maps y el sitio web como fuente de la lista.</li>
+        <li>prueba siempre 10 filas y revisa cuántas tienen un correo verificado;</li>
+        <li>si la base es limitada, pídele al agente que busque en el sitio web de la empresa (página de contacto, equipo);</li>
+        <li>para una pequeña empresa local (clínica, tienda, oficina), usa Google Maps y el sitio web como fuentes para crear la lista.</li>
       </ul></div>
   </div>
 </div></section>
@@ -333,31 +358,31 @@ tasa de spam por debajo de 0,3% (regla de Gmail para remitentes)</pre>
 <section id="erros"><div class="wrap">
   <span class="chip">Errores comunes</span>
   <h2>Qué puede salir mal (y cómo evitarlo)</h2>
-  <p class="sub">Casi todos los problemas aparecen al saltarse alguna regla de <code>CLAUDE.md</code>.</p>
+  <p class="sub">Casi todos los problemas surgen por saltarse una de las reglas de <code>CLAUDE.md</code>.</p>
   <div class="grid g3">
-    <div class="card"><h3><span class="bad">✗</span> Procesar toda la tabla de entrada</h3><p>Consume los créditos del mes con una configuración incorrecta. Empieza siempre con 10 filas.</p></div>
-    <div class="card"><h3><span class="bad">✗</span> Buscar decisores en todas las empresas</h3><p>Es el mayor desperdicio. Usa la condición de ejecución: solo cuando haya señales.</p></div>
-    <div class="card"><h3><span class="bad">✗</span> Contexto vacío</h3><p>Sin perfil, casos y pruebas, la IA escribe mensajes genéricos. Completa <code>contexto/</code> antes de empezar.</p></div>
-    <div class="card"><h3><span class="bad">✗</span> Señal sin fuente o vencida</h3><p>Mencionar una vacante que ya cerró da una impresión de descuido. Exige un enlace y respeta el periodo de vigencia de cada señal.</p></div>
-    <div class="card"><h3><span class="bad">✗</span> Enviar desde el dominio principal</h3><p>Si acaba en spam, el correo de la empresa también puede verse afectado. Usa un dominio secundario con buena reputación.</p></div>
-    <div class="card"><h3><span class="bad">✗</span> Enviar demasiado el primer día</h3><p>Pocos correos al día, aumento gradual y tasa de spam por debajo de 0,3%.</p></div>
+    <div class="card"><h3><span class="bad">✗</span> Ejecutar toda la tabla de inmediato</h3><p>Consume los créditos del mes con una configuración incorrecta. Empieza siempre con 10 filas.</p></div>
+    <div class="card"><h3><span class="bad">✗</span> Buscar a quien decide en todas las empresas</h3><p>Es el mayor desperdicio. Usa la condición de ejecución: solo en empresas con señales.</p></div>
+    <div class="card"><h3><span class="bad">✗</span> Contexto vacío</h3><p>Sin perfil, casos y pruebas, la IA redacta un mensaje genérico. Completa <code>contexto/</code> (en portugués) antes de empezar.</p></div>
+    <div class="card"><h3><span class="bad">✗</span> Señal sin fuente o vencida</h3><p>Mencionar una vacante que ya cerró parece descuidado. Exige un enlace y respeta el plazo de cada señal.</p></div>
+    <div class="card"><h3><span class="bad">✗</span> Enviar desde el dominio principal</h3><p>Si los correos llegan a spam, también afecta el correo de la empresa. Usa un dominio secundario con buena reputación.</p></div>
+    <div class="card"><h3><span class="bad">✗</span> Enviar muchos correos el primer día</h3><p>Envía pocos al día, aumenta el volumen gradualmente y mantén la tasa de spam por debajo del 0,3%.</p></div>
   </div>
 </div></section>
 
 <section id="kit"><div class="wrap">
   <span class="chip">Descarga el kit</span>
   <h2>Qué incluye el kit</h2>
-  <p class="sub">Todo está en texto simple para copiarlo a la carpeta de tu proyecto y editarlo.</p>
+  <p class="sub">Todo está en texto simple para que lo copies a la carpeta de tu proyecto y lo edites. Los archivos del kit están en portugués.</p>
   <div class="tblwrap"><table class="tbl">
     <tr><th>Archivo</th><th>Para qué sirve</th></tr>
-    <tr><td><code>CLAUDE.md</code></td><td>Reglas del agente: no gastar créditos sin pedir permiso, probar 10 filas primero, condición de ejecución, revisión humana, opción para darse de baja, LGPD.</td></tr>
-    <tr><td><code>contexto/</code> (en portugués)</td><td>6 modelos (perfil del negocio, oferta, casos, pruebas, FAQ, tono de voz) + <code>exemplo/</code> con una empresa ficticia.</td></tr>
-    <tr><td><code>prompts/goal-prospeccao.md</code> (en portugués)</td><td>Prompt para <code>/goal</code> con una condición de cierre verificable.</td></tr>
+    <tr><td><code>CLAUDE.md</code> (en portugués)</td><td>Reglas para el agente: no gastar créditos sin pedir permiso, probar 10 filas antes, condición de ejecución, revisión humana, opción de salida y LGPD.</td></tr>
+    <tr><td><code>contexto/</code> (en portugués)</td><td>6 modelos (perfil del negocio, oferta, casos, pruebas, preguntas frecuentes, tono de voz) + <code>exemplo/</code> (en portugués), con una empresa ficticia.</td></tr>
+    <tr><td><code>prompts/goal-prospeccao.md</code> (en portugués)</td><td>Prompt para <code>/goal</code> con un objetivo verificable.</td></tr>
     <tr><td><code>prompts/passo-a-passo.md</code> (en portugués)</td><td>Un prompt en portugués para cada uno de los 7 pasos.</td></tr>
-    <tr><td><code>sinais.yaml</code> (en portugués)</td><td>Señales de ejemplo (contratación, lanzamiento, nuevo director, inversión, cambio de precio, expansión) con periodo de vigencia y peso.</td></tr>
+    <tr><td><code>sinais.yaml</code> (en portugués)</td><td>Señales de ejemplo (contratación, lanzamiento, nuevo director, inversión, cambio de precio, expansión), con un plazo y un peso.</td></tr>
     <tr><td><code>colunas-csv.md</code> (en portugués)</td><td>Las columnas de la hoja de cálculo de salida y las reglas de revisión.</td></tr>
-    <tr><td><code>checklist-lgpd.md</code> (en portugués)</td><td>Checklist práctico de LGPD para prospección B2B.</td></tr>
-    <tr><td><code>supressao.csv</code></td><td>Lista de quienes pidieron darse de baja (empieza vacía).</td></tr>
+    <tr><td><code>checklist-lgpd.md</code> (en portugués)</td><td>Lista práctica de verificación de la LGPD brasileña para la prospección B2B.</td></tr>
+    <tr><td><code>supressao.csv</code> (en portugués)</td><td>Lista de quienes pidieron dejar de recibir mensajes (empieza vacía).</td></tr>
   </table></div>
   <div class="cta" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
     <a class="btn" href="https://github.com/inematds/prospeccao-por-sinais/archive/refs/heads/main.zip">Descargar el kit (.zip)</a>
@@ -365,16 +390,17 @@ tasa de spam por debajo de 0,3% (regla de Gmail para remitentes)</pre>
   </div>
 </div></section>
 
-<section id="videos"><div class="wrap">
+<!-- Sección Videos: permanece oculta (hidden) hasta que se agreguen los embeds de YouTube. Al pegarlos en el lugar del marcador de abajo, quita el atributo hidden. -->
+<section id="videos" hidden><div class="wrap">
   <span class="chip">Videos</span>
-  <h2>Mira el proceso explicado</h2>
+  <h2>Mira cómo funciona el flujo</h2>
   <!-- VIDEOS -->
 </div></section>
 
 <footer>
   <div class="wrap">
     <div class="pill">Claude Code</div><div class="pill">Clay</div><div class="pill">CSV</div><div class="pill">LGPD</div>
-    <p style="margin-top:18px">Prospección por Señales · kit abierto y gratuito ·
+    <p style="margin-top:18px">Prospección por señales · kit abierto y gratuito ·
       <a href="https://github.com/inematds/prospeccao-por-sinais">inematds/prospeccao-por-sinais</a> ·
       <a href="https://inema.club">INEMA.CLUB</a></p>
   </div>

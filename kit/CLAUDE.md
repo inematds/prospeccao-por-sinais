@@ -19,8 +19,9 @@ quem envia é a pessoa dona do projeto.
   quantas linhas e o que espera gastar, e espere um "pode".
 - **Rode 10 linhas antes.** Todo passo novo roda primeiro em 10 linhas. Mostre o resultado
   (quantas acharam dado, quantas vieram vazias, exemplos) e só então peça para rodar o resto.
-- **Condição de execução.** Busca de decisor e enriquecimento só rodam em empresa onde o sinal
-  está presente (`sinal_presente = sim`). Empresa sem sinal não gasta crédito com pessoa.
+- **Condição de execução.** Busca de decisor e enriquecimento só rodam em "empresa com sinal":
+  a soma dos pesos dos sinais ativos (dentro de `janela_dias`, ver `sinais.yaml`) é 30 ou mais.
+  Empresa sem sinal não gasta crédito com pessoa.
 - **Cascata para no primeiro resultado válido.** Monte o enriquecimento de e-mail em cascata
   (vários fornecedores em sequência) e pare no primeiro e-mail válido.
 - **Celular é opcional.** Só busque telefone se a pessoa pedir; ele não sai no plano grátis nem
